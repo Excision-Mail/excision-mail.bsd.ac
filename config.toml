@@ -1,0 +1,4 @@
+baseURL = "https://ansimail.bsd.ac/"
+languageCode = "en-us"
+title = "AnsiMail @ OpenBSD"
+theme = "kraiklyn"
