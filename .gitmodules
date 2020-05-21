@@ -1,3 +1,6 @@
 [submodule "themes/dot"]
 	path = themes/dot
 	url = git@github.com:gethugothemes/dot-hugo-documentation-theme.git
+[submodule "themes/book"]
+	path = themes/book
+	url = https://github.com/alex-shpak/hugo-book
