@@ -1,56 +1,78 @@
 #+hugo_base_dir: ../
-#+hugo_section: posts
+#+hugo_section: ./
 
-
+* Introduction
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:END:
+welcome
 * Contact
 :PROPERTIES:
-:EXPORT_FILE_NAME: contact
-:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: contact
 :END:
 trying this out to see what is happening
 
 * About
 :PROPERTIES:
-:EXPORT_FILE_NAME: about
-:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: about
 :END:
 This gets created directly in ~<HUGO_BASE_DIR>/content/~.
 
 * Credits
 :PROPERTIES:
-:EXPORT_FILE_NAME: credits
-:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: credits
 :END:
 section to honor the people who have contributed
 
 * KISS
 :PROPERTIES:
-:EXPORT_FILE_NAME: kiss
-:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: kiss
 :END:
 principles of development and what is not the aim of this setup
 
 * Usage
 :PROPERTIES:
-:EXPORT_FILE_NAME: usage
-:EXPORT_HUGO_SECTION: /
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: usage
 :END:
 general usage information
 
+* Contributing
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: dev
+:END:
+section for people wanting to contribute
+
+* Installation Guides
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: install
+:END:
 * Quick Install
 :PROPERTIES:
-:EXPORT_FILE_NAME: quick
-:EXPORT_HUGO_SECTION: install
+:EXPORT_FILE_NAME: quickinstall
+:EXPORT_HUGO_SECTION*: install
 :END:
 this is a quick install guide
 
-* Installation
+* Detailed Installation
 :PROPERTIES:
-:EXPORT_FILE_NAME: install
-:EXPORT_HUGO_SECTION: install
+:EXPORT_FILE_NAME: fullinstall
+:EXPORT_HUGO_SECTION*: install
 :END:
-** Installation
-
 ** Assumptions
    This is a install guide for the common human, who has just learned that she wants to set up and email server.
    She know nothing about anything related to setting up a mail server and only has a domain name and couple of bucks (<$10) in her hand.
@@ -117,7 +139,6 @@ sh scripts/bootstrap.sh
 This installs the necessary packages, Ansible and GnuPG on your server.
 (Currently GnuPG is to be installed manually because it cannot be installed through Ansible due to package ambiguity)
 
-
 ** Run preinstallation playbook
 
    After the system finishes bootstrapping you need to run the first playbook: `site-preinstall.yml`
@@ -179,10 +200,3 @@ A good test is to go on https://mail-tester.com and see what score you get. You 
 Don't hesitate to ask any questions on IRC or github. I might not be able to respond immediately but I will try to be fast.
 
 Take care, be safe and get back your privacy from Big Brother :)
-
-*  Contributing
-:PROPERTIES:
-:EXPORT_FILE_NAME: dev
-:EXPORT_HUGO_SECTION: /
-:END:
-section for people wanting to contribute

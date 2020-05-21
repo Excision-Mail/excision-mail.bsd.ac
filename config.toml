@@ -1,24 +1,18 @@
-baseURL = "https://ansimail.bsd.ac/"
+baseURL = "/"
 languageCode = "en-us"
 title = "AnsiMail @ bsd.ac"
-theme = "book"
+theme = "learn"
 
-# book theme parameters
-enableGitInfo = true
+# needed for ox-hugo code snippets
+[markup.goldmark.renderer]
+unsafe = true
 
-[menu]
-[[menu.after]]
-name = "Github"
-url = "https://github.com/AnsiMail/AnsiMail"
-weight = 10
+# learn theme specific parameters
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  #BookLogo = 'logo.png'
-
-  BookSection = '*'
-
-  BookRepo = 'https://github.com/AnsiMail/ansimail.bsd.ac'
-
-  BookSearch = true
-
-  BookComments = false
+themeVariant = "ansimail"
+desc = "Fullstack, security focused mailserver based on OpenSMTPD for OpenBSD using ansible"

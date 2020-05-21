@@ -1,11 +1,8 @@
 +++
-title = "Installation"
+title = "Detailed Installation"
 author = ["epsilon"]
 draft = false
 +++
-
-## Installation {#installation}
-
 
 ## Assumptions {#assumptions}
 
