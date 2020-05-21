@@ -1,5 +1,5 @@
 +++
-title = "credits"
+title = "Credits"
 author = ["epsilon"]
 draft = false
 +++
