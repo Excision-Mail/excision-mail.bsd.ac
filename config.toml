@@ -6,28 +6,19 @@ theme = "book"
 # book theme parameters
 enableGitInfo = true
 
+[menu]
+[[menu.after]]
+name = "Github"
+url = "https://github.com/AnsiMail/AnsiMail"
+weight = 10
+
 [params]
   #BookLogo = 'logo.png'
 
-  # (Optional, default none) Set leaf bundle to render as side menu
-  # When not specified file structure and weights will be used
-  #BookMenuBundle = '/menu'
-
-  # (Optional, default docs) Specify section of content to render as menu
-  # You can also set value to "*" to render all sections to menu
   BookSection = '*'
 
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
   BookRepo = 'https://github.com/AnsiMail/ansimail.bsd.ac'
 
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
   BookSearch = true
 
-  # (Optional, default true) Enables comments template on pages
-  # By default partals/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
   BookComments = false

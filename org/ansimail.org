@@ -1,47 +1,53 @@
 #+hugo_base_dir: ../
-#+hugo_section: ./
+#+hugo_section: posts
 
 
 * Contact
 :PROPERTIES:
 :EXPORT_FILE_NAME: contact
+:EXPORT_HUGO_SECTION: /
 :END:
 trying this out to see what is happening
 
 * About
 :PROPERTIES:
 :EXPORT_FILE_NAME: about
+:EXPORT_HUGO_SECTION: /
 :END:
 This gets created directly in ~<HUGO_BASE_DIR>/content/~.
 
 * Credits
 :PROPERTIES:
 :EXPORT_FILE_NAME: credits
+:EXPORT_HUGO_SECTION: /
 :END:
 section to honor the people who have contributed
 
 * KISS
 :PROPERTIES:
 :EXPORT_FILE_NAME: kiss
+:EXPORT_HUGO_SECTION: /
 :END:
 principles of development and what is not the aim of this setup
 
 * Usage
 :PROPERTIES:
 :EXPORT_FILE_NAME: usage
+:EXPORT_HUGO_SECTION: /
 :END:
 general usage information
 
 * Quick Install
 :PROPERTIES:
 :EXPORT_FILE_NAME: quick
-:HUGO_SECTION: install
+:EXPORT_HUGO_SECTION: install
 :END:
 this is a quick install guide
 
 * Installation
 :PROPERTIES:
 :EXPORT_FILE_NAME: install
+:EXPORT_HUGO_SECTION: install
 :END:
 ** Installation
 
@@ -174,9 +180,9 @@ Don't hesitate to ask any questions on IRC or github. I might not be able to res
 
 Take care, be safe and get back your privacy from Big Brother :)
 
-
 *  Contributing
 :PROPERTIES:
 :EXPORT_FILE_NAME: dev
+:EXPORT_HUGO_SECTION: /
 :END:
 section for people wanting to contribute

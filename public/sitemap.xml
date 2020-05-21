@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://ansimail.bsd.ac/about/</loc>
-    <lastmod>2020-05-21T10:22:34-04:00</lastmod>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/</loc>
-    <lastmod>2020-05-21T10:22:34-04:00</lastmod>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
   <url>
@@ -18,21 +18,25 @@
   
   <url>
     <loc>https://ansimail.bsd.ac/contact/</loc>
-    <lastmod>2020-05-21T10:22:34-04:00</lastmod>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/dev/</loc>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/credits/</loc>
-    <lastmod>2020-05-21T10:22:34-04:00</lastmod>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ansimail.bsd.ac/install/install/</loc>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/install/</loc>
-    <lastmod>2020-05-21T10:22:34-04:00</lastmod>
   </url>
   
   <url>
@@ -41,7 +45,12 @@
   </url>
   
   <url>
+    <loc>https://ansimail.bsd.ac/install/quick/</loc>
+  </url>
+  
+  <url>
     <loc>https://ansimail.bsd.ac/quick/</loc>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
   <url>
@@ -50,6 +59,7 @@
   
   <url>
     <loc>https://ansimail.bsd.ac/usage/</loc>
+    <lastmod>2020-05-21T11:30:00-04:00</lastmod>
   </url>
   
 </urlset>
