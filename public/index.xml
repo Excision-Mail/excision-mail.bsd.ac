@@ -6,18 +6,53 @@
     <description>Recent content on AnsiMail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 May 2020 17:47:28 -0400</lastBuildDate>
     
 	<atom:link href="https://ansimail.bsd.ac/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>AnsiMail</title>
-      <link>https://ansimail.bsd.ac/posts/my-first-post/</link>
-      <pubDate>Fri, 08 May 2020 17:47:28 -0400</pubDate>
+      <title>about</title>
+      <link>https://ansimail.bsd.ac/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ansimail.bsd.ac/posts/my-first-post/</guid>
-      <description>Welcome</description>
+      <guid>https://ansimail.bsd.ac/about/</guid>
+      <description>This gets created directly in &amp;lt;HUGO_BASE_DIR&amp;gt;/content/.</description>
+    </item>
+    
+    <item>
+      <title>contact</title>
+      <link>https://ansimail.bsd.ac/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansimail.bsd.ac/contact/</guid>
+      <description>trying this out to see what is happening</description>
+    </item>
+    
+    <item>
+      <title>credits</title>
+      <link>https://ansimail.bsd.ac/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansimail.bsd.ac/credits/</guid>
+      <description>section to honor the people who have contributed</description>
+    </item>
+    
+    <item>
+      <title>developer</title>
+      <link>https://ansimail.bsd.ac/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansimail.bsd.ac/developer/</guid>
+      <description>section for people wanting to contribute</description>
+    </item>
+    
+    <item>
+      <title>KISS</title>
+      <link>https://ansimail.bsd.ac/kiss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansimail.bsd.ac/kiss/</guid>
+      <description>principles of development and what is not the aim of this setup</description>
     </item>
     
   </channel>

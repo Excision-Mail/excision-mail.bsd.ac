@@ -1,0 +1,33 @@
+#+hugo_base_dir: ../
+#+hugo_section: ./
+
+
+*  contact
+:PROPERTIES:
+:EXPORT_FILE_NAME: contact
+:END:
+trying this out to see what is happening
+
+*  about
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:END:
+This gets created directly in ~<HUGO_BASE_DIR>/content/~.
+
+*  credits
+:PROPERTIES:
+:EXPORT_FILE_NAME: credits
+:END:
+section to honor the people who have contributed
+
+*  KISS
+:PROPERTIES:
+:EXPORT_FILE_NAME: kiss
+:END:
+principles of development and what is not the aim of this setup
+
+*  developer
+:PROPERTIES:
+:EXPORT_FILE_NAME: developer
+:END:
+section for people wanting to contribute

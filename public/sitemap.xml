@@ -3,22 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ansimail.bsd.ac/posts/my-first-post/</loc>
-    <lastmod>2020-05-08T17:47:28-04:00</lastmod>
+    <loc>https://ansimail.bsd.ac/about/</loc>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/</loc>
-    <lastmod>2020-05-08T17:47:28-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ansimail.bsd.ac/posts/</loc>
-    <lastmod>2020-05-08T17:47:28-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ansimail.bsd.ac/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ansimail.bsd.ac/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ansimail.bsd.ac/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ansimail.bsd.ac/developer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ansimail.bsd.ac/kiss/</loc>
   </url>
   
   <url>
