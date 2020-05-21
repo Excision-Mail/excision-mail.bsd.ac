@@ -1,4 +1,4 @@
 baseURL = "https://ansimail.bsd.ac/"
 languageCode = "en-us"
 title = "AnsiMail @ bsd.ac"
-theme = "dot"
+theme = "book"
