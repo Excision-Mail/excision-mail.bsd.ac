@@ -47,6 +47,15 @@
     </item>
     
     <item>
+      <title>install</title>
+      <link>https://ansimail.bsd.ac/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ansimail.bsd.ac/install/</guid>
+      <description>installation manual</description>
+    </item>
+    
+    <item>
       <title>KISS</title>
       <link>https://ansimail.bsd.ac/kiss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

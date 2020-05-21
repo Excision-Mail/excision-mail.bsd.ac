@@ -26,6 +26,12 @@ section to honor the people who have contributed
 :END:
 principles of development and what is not the aim of this setup
 
+*  install
+:PROPERTIES:
+:EXPORT_FILE_NAME: install
+:END:
+installation manual
+
 *  developer
 :PROPERTIES:
 :EXPORT_FILE_NAME: developer
