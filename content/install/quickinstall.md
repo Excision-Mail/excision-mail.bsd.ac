@@ -1,5 +1,5 @@
 +++
-title = "Quick Install"
+title = "Quick install"
 author = ["epsilon"]
 draft = false
 +++

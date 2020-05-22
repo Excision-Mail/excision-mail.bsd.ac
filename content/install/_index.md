@@ -1,5 +1,5 @@
 +++
-title = "Installation Guides"
+title = "Installation guides"
 author = ["epsilon"]
 draft = false
 chapter = true
