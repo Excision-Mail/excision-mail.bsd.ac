@@ -13,6 +13,18 @@ unsafe = true
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+# extra menu functionality
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/AnsiMail/AnsiMail"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
 [params]
 themeVariant = "ansimail"
 desc = "Fullstack, security focused mailserver based on OpenSMTPD for OpenBSD using ansible"

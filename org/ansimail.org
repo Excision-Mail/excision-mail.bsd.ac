@@ -7,7 +7,8 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_AUTHOR: "Aisha Tammy"
 :END:
-** welcome
+** Introduction
+this website is still WIP but most of the articles from the wiki have been ported
 * Contact
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
@@ -44,15 +45,6 @@ section to honor the people who have contributed
 :END:
 principles of development and what is not the aim of this setup
 
-* Usage
-:PROPERTIES:
-:EXPORT_FILE_NAME: _index
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
-:EXPORT_HUGO_SECTION*: usage
-:EXPORT_AUTHOR: "Aisha Tammy"
-:END:
-general usage information
-
 * Contributing
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
@@ -61,6 +53,7 @@ general usage information
 :EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 section for people wanting to contribute
+
 
 * Installation guides
 :PROPERTIES:
@@ -210,6 +203,7 @@ A good test is to go on https://mail-tester.com and see what score you get. You 
 Don't hesitate to ask any questions on IRC or github. I might not be able to respond immediately but I will try to be fast.
 
 Take care, be safe and get back your privacy from Big Brother :)
+
 
 * Extra guides
 :PROPERTIES:
@@ -495,4 +489,35 @@ _openpgpkey._tcp.sdomain.xyz.    TTL IN SRV 0 0 443 wkd.sdomain.xyz.
 ** SRV records for autodiscover in Microsoft
 #+begin_src
 _autodiscover._tcp.sdomain.xyz.  TTL IN SRV 0 0 443 autodiscover.sdomain.xyz.
+#+end_src
+
+* Usage
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_HUGO_SECTION*: usage
+:EXPORT_AUTHOR: "Aisha Tammy"
+:END:
+* Backup
+:PROPERTIES:
+:EXPORT_FILE_NAME: backup
+:EXPORT_HUGO_SECTION*: usage
+:EXPORT_AUTHOR: "Aisha Tammy"
+:END:
+list of things to backup
+** non-replaceable files
+These files are generated over time when using AnsiMail and cannot be restored by the ansible scripts
+#+begin_src sh -n
+# ansimail config files folder
+/etc/ansimail/
+# ansimail-passwd home folder
+#  - contains ssh keys of users
+/var/ansimail-passwd/
+# ansimail user home folder
+#  - contains important gpg keys
+/var/ansimail-home/
+# published gpg keys of users
+/var/www/openpgpkey/
+# and of course, the whole mails folder
+/var/ansimail/
 #+end_src
