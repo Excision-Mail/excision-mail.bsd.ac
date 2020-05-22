@@ -5,6 +5,7 @@
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 ** welcome
 * Contact
@@ -12,6 +13,7 @@
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: contact
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 trying this out to see what is happening
 
@@ -20,6 +22,7 @@ trying this out to see what is happening
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: about
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 This gets created directly in ~<HUGO_BASE_DIR>/content/~.
 
@@ -28,6 +31,7 @@ This gets created directly in ~<HUGO_BASE_DIR>/content/~.
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: credits
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 section to honor the people who have contributed
 
@@ -36,6 +40,7 @@ section to honor the people who have contributed
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: kiss
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 principles of development and what is not the aim of this setup
 
@@ -44,6 +49,7 @@ principles of development and what is not the aim of this setup
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: usage
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 general usage information
 
@@ -52,6 +58,7 @@ general usage information
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: dev
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 section for people wanting to contribute
 
@@ -60,11 +67,13 @@ section for people wanting to contribute
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: install
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 * Quick install
 :PROPERTIES:
 :EXPORT_FILE_NAME: quickinstall
 :EXPORT_HUGO_SECTION*: install
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 this is a quick install guide
 
@@ -72,6 +81,7 @@ this is a quick install guide
 :PROPERTIES:
 :EXPORT_FILE_NAME: fullinstall
 :EXPORT_HUGO_SECTION*: install
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 ** Assumptions
    This is a install guide for the common human, who has just learned that she wants to set up and email server.
@@ -206,12 +216,14 @@ Take care, be safe and get back your privacy from Big Brother :)
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :chapter true
 :EXPORT_HUGO_SECTION*: guides
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 extra guides not directly related to base ansimail
 * Secondary nameserver overview
 :PROPERTIES:
 :EXPORT_FILE_NAME: secondary
 :EXPORT_HUGO_SECTION*: guides
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 ** Secondary and Primary DNS explanations
 
@@ -301,6 +313,7 @@ Just take the two lists of ip addresses and add them in the appropriate place in
 :PROPERTIES:
 :EXPORT_FILE_NAME: freedns
 :EXPORT_HUGO_SECTION*: guides
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 ** FreeDNS (afraid.org)
 Example setup for stealth master configuration using freedns.afraid.org
@@ -415,6 +428,7 @@ public_nameservers:
 :PROPERTIES:
 :EXPORT_FILE_NAME: manualdns
 :EXPORT_HUGO_SECTION*: guides
+:EXPORT_AUTHOR: "Aisha Tammy"
 :END:
 If for some reason you have decided to not /enable_nsd/ and want to do it manually,
 I have outlined the necessary steps for creating records at your *DNS provider*.

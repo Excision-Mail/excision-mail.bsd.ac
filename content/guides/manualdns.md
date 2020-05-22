@@ -1,6 +1,6 @@
 +++
 title = "Manual DNS setup"
-author = ["epsilon"]
+author = ["Aisha Tammy"]
 draft = false
 +++
 

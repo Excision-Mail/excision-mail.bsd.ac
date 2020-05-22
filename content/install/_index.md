@@ -1,6 +1,6 @@
 +++
 title = "Installation guides"
-author = ["epsilon"]
+author = ["Aisha Tammy"]
 draft = false
 chapter = true
 +++

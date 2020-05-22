@@ -1,6 +1,6 @@
 +++
 title = "Quick install"
-author = ["epsilon"]
+author = ["Aisha Tammy"]
 draft = false
 +++
 

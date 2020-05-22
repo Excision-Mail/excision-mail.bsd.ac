@@ -1,6 +1,6 @@
 +++
 title = "FreeDNS setup"
-author = ["epsilon"]
+author = ["Aisha Tammy"]
 draft = false
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Detailed installation"
-author = ["epsilon"]
+author = ["Aisha Tammy"]
 draft = false
 +++
 
