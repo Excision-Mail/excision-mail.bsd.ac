@@ -1,7 +1,9 @@
 +++
 title = "Detailed installation"
 author = ["Aisha Tammy"]
+lastmod = 2020-06-16T15:48:45-04:00
 draft = false
+weight = 1009
 +++
 
 ## Assumptions {#assumptions}
@@ -13,7 +15,7 @@ We will use those $10 to do some really cool things:
 
 -   Buy a small VPS (with both ipv4 and ipv6)
 -   Buy a secondary DNS provider
--   Set up AnsiMail on the server
+-   Set up Excision on the server
 
 
 ## General Information {#general-information}
@@ -29,7 +31,7 @@ You could host the email in your house but it is going to require certain consid
 
 One of the first things that you need to understand is that you are going to need a static IP. The easiest way to get this is to use a VPS hosting provider, who also supports OpenBSD, the best of which is [Vultr](<https://vultr.com>).
 
-You can select the lowest plan for $5 per month, which gives you the enough computing power to try out AnsiMail without turning off any features :)
+You can select the lowest plan for $5 per month, which gives you the enough computing power to try out Excision without turning off any features :)
 The smaller ones are a bit too small for anything worthwhile, imho.
 
 You server requirements:
@@ -52,12 +54,12 @@ If you skipped to this section, the prerequisites are:
 ### Set up secondary nameservers {#set-up-secondary-nameservers}
 
 One of the first things that we are going to do is to get a secondary nameserver service.
-AnsiMail comes with a automated stealth master NSD configuration using the default NSD service in OpenBSD.
+Excision comes with a automated stealth master NSD configuration using the default NSD service in OpenBSD.
 The advantage of this is to be able to modify complex DNS records easily via text configuration which is nicely documented, explaining each option. If anybody has ever tried to work with a web ui based dns configuration and tried to set SRV records, they will know how insanely tedious and complicated it really is.
 Thankfully the worst part of the DNS configuration is automated leaving you with almost nothing to manage yourself (though you can if you want to).
 
 For a secondary nameserver, the minimum requirements are to be able to accept NOTIFY (which informs the secondary about any updates from your computer).
-Look at the pinned issue for a recommended list of secondary providers. Most services are really cheap at < $2 per month, for more than 10 domains at a time. So if you have a friend it is useful to do this together, as AnsiMail also supports multiple domain email handling.
+Look at the pinned issue for a recommended list of secondary providers. Most services are really cheap at < $2 per month, for more than 10 domains at a time. So if you have a friend it is useful to do this together, as Excision also supports multiple domain email handling.
 
 The secondary DNS provider will give you two kinds of ip lists
 
@@ -69,14 +71,14 @@ These two are the longest configuration options and everything after this is smo
 
 ## Set up variables file {#set-up-variables-file}
 
-The configuration file for AnsiMail is called \`vars.yml\` which is supposed to be the filled-in version of the \`vars-sample.yml\` file.
+The configuration file for Excision is called \`vars.yml\` which is supposed to be the filled-in version of the \`vars-sample.yml\` file.
 Read the \`vars-sample.yml\` file in depth because all the options have been explained in great detail, so please make sure that you understand each of them.
 
 You will see that you need to enter the two lists of ip addresses in the two options provided for the stealth master configuration to work.
 
 First step that you need to do is to make sure that your system is bootstrapped correctly, to get ansible working.
 
-The assumption going forwarded is that you have downloaded and extracted AnsiMail to some directory and it is the current working directory.
+The assumption going forwarded is that you have downloaded and extracted Excision to some directory and it is the current working directory.
 
 {{< highlight sh "linenos=table, linenostart=1" >}}
 sh scripts/bootstrap.sh
@@ -111,21 +113,21 @@ After this finishes running you should reboot your server to make sure that all 
 
 AND YOU ARE DONE!
 
-AnsiMail has finished installing on your system and you have a working mail server (which you are unable to access because you don't know the password of your email account :P)
+Excision has finished installing on your system and you have a working mail server (which you are unable to access because you don't know the password of your email account :P)
 
 
 ## Post ansible finishing steps {#post-ansible-finishing-steps}
 
-Now that the server has been rebooted and AnsiMail is running, you need to reset the password of you admin account:
+Now that the server has been rebooted and Excision is running, you need to reset the password of you admin account:
 
 Supposing that your adminstrator is called \`notaisha\` and your domain was \`aisha.cc\`, run the following command to change the password and reload the services
 
 {{< highlight sh "linenos=table, linenostart=1" >}}
-ansimail change-passwd "notaisha@aisha.cc"
-ansimail virtual-regen
+excision change-passwd "notaisha@aisha.cc"
+excision virtual-regen
 {{< /highlight >}}
 
-You can read the github wiki for some general purpose server maintenance commands that AnsiMail adds to the system. They are supremely helpful :)
+You can read the github wiki for some general purpose server maintenance commands that Excision adds to the system. They are supremely helpful :)
 
 
 ### Testing your email {#testing-your-email}
@@ -140,7 +142,7 @@ Some recommended email clients are:
 -   KMail
 -   Evolution
 -   mutt/neomutt
--   Literally anything in the world, AnsiMail is configured to make everyone auto-detect all ports and domain settings automatically
+-   Literally anything in the world, Excision is configured to make everyone auto-detect all ports and domain settings automatically
 
 Your username is \`<admin>@<domain.tld>\`, where you fill your own credentials and your password is what you set in the previous step.
 

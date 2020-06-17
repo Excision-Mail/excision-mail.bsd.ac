@@ -1,7 +1,9 @@
 +++
 title = "Backup"
 author = ["Aisha Tammy"]
+lastmod = 2020-06-16T15:48:50-04:00
 draft = false
+weight = 1015
 +++
 
 list of things to backup
@@ -9,19 +11,19 @@ list of things to backup
 
 ## non-replaceable files {#non-replaceable-files}
 
-These files are generated over time when using AnsiMail and cannot be restored by the ansible scripts
+These files are generated over time when using Excision and cannot be restored by the ansible scripts
 
 {{< highlight sh "linenos=table, linenostart=1" >}}
-# ansimail config files folder
-/etc/ansimail/
-# ansimail-passwd home folder
+# excision config files folder
+/etc/excision/
+# excision-passwd home folder
 #  - contains ssh keys of users
-/var/ansimail-passwd/
-# ansimail user home folder
+/var/excision-passwd/
+# excision user home folder
 #  - contains important gpg keys
-/var/ansimail-home/
+/var/excision-home/
 # published gpg keys of users
 /var/www/openpgpkey/
 # and of course, the whole mails folder
-/var/ansimail/
+/var/excision/
 {{< /highlight >}}

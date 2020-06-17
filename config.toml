@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "AnsiMail @ bsd.ac"
+title = "Excision Mail @ bsd.ac"
 theme = "learn"
 
 # needed for ox-hugo code snippets
@@ -17,7 +17,7 @@ home = [ "HTML", "RSS", "JSON"]
 [[menu.shortcuts]] 
 name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
-url = "https://github.com/AnsiMail/AnsiMail"
+url = "https://github.com/Excision-Mail/Excision-Mail"
 weight = 10
 
 [[menu.shortcuts]]
@@ -26,5 +26,5 @@ url = "/credits"
 weight = 30
 
 [params]
-themeVariant = "ansimail"
+themeVariant = "excision"
 desc = "Fullstack, security focused mailserver based on OpenSMTPD for OpenBSD using ansible"

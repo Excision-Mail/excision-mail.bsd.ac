@@ -1,7 +1,9 @@
 +++
 title = "FreeDNS setup"
 author = ["Aisha Tammy"]
+lastmod = 2020-06-16T15:48:48-04:00
 draft = false
+weight = 1012
 +++
 
 ## FreeDNS (afraid.org) {#freedns--afraid-dot-org}
@@ -40,7 +42,7 @@ E.g. on NameCheap:
 {{< figure src="/images/namecheap_dns_configuration.png" >}}
 
 
-## AnsiMail configuration {#ansimail-configuration}
+## Excision configuration {#excision-configuration}
 
 A full vars.yml file as an example is:
 

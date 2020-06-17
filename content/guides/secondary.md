@@ -1,7 +1,9 @@
 +++
 title = "Secondary nameserver overview"
 author = ["Aisha Tammy"]
+lastmod = 2020-06-16T15:48:47-04:00
 draft = false
+weight = 1011
 +++
 
 ## Secondary and Primary DNS explanations {#secondary-and-primary-dns-explanations}
@@ -94,9 +96,9 @@ None of the users ever know that the actual authoritative information is coming 
 _your VPS server_, hence it is called a **stealth master**.
 
 
-## AnsiMail setup {#ansimail-setup}
+## Excision setup {#excision-setup}
 
-AnsiMail does this automatically provided that you give the **ip2** and **ip3** in the configuration.
+Excision does this automatically provided that you give the **ip2** and **ip3** in the configuration.
 
 -   **ip2** - This is the address that is allowed to make **AXFR** requests and also the address that **NOTIFY** updates are sent to
 -   **ip3** - This is added in the zone file for a cross check with your registrar to make sure that the proper nameservers are used.
