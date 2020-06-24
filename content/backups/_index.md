@@ -1,19 +1,20 @@
 +++
-title = "Backup"
+title = "Backups"
 author = ["Aisha Tammy"]
 lastmod = 2020-06-16T15:48:50-04:00
 draft = false
 weight = 1015
 +++
 
-list of things to backup
+# System Backup
+
 
 
 ## non-replaceable files {#non-replaceable-files}
 
 These files are generated over time when using Excision and cannot be restored by the ansible scripts
 
-{{< highlight sh "linenos=table, linenostart=1" >}}
+```sh linenostart=1
 # excision config files folder
 /etc/excision/
 # excision-passwd home folder
@@ -26,4 +27,4 @@ These files are generated over time when using Excision and cannot be restored b
 /var/www/openpgpkey/
 # and of course, the whole mails folder
 /var/excision/
-{{< /highlight >}}
+```
