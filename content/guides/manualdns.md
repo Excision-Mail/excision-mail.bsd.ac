@@ -32,6 +32,9 @@ mta-sts.sdomain.xyz.             TTL IN CNAME excision.pdomain.abc.
 imap.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
 pop3.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
 smtp.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
+webmail.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
+calendar.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
+contacts.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
 ```
 
 
