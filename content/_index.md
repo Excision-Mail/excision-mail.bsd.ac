@@ -3,6 +3,7 @@ title = "Excision Mail"
 author = ["Aisha Tammy"]
 categories = ["main"]
 draft = false
+chapter = true
 +++
 
 # Excision Mail {#excision-mail}
@@ -12,19 +13,6 @@ Fullstack, security focused mailserver based on OpenSMTPD for OpenBSD.
 {{% notice info %}}
 Website is still a WIP but feel free to explore and give feedback.
 {{% /notice %}}
-
-## Security Highlights
-
-- All connections are TLS enforced, including `pop3s`, `imaps`, `smtps`.
-  - `smtp` and `sieve` are [**STARTTLS**](https://en.wikipedia.org/wiki/Opportunistic_TLS#SSL_ports) with enforced TLS escalation.
-  - Insecure versions of `pop3` and `imap` are disabled for additional security.
-- [GnuPG](https://gnupg.org/) [Web Key Service](https://wiki.gnupg.org/WKS) and [Web Key Directory](https://wiki.gnupg.org/WKD) support for automatic publishing of public keys in a multi-domain server setting.
-  - Server only contains public keys of user, so encrypted emails can only be decrypted by the user.
-  - Currently the **only** email deployment service which handles automated publishing of GPG keys.
-- [**mta-sts**](https://tools.ietf.org/html/rfc8461) for fully encrypted email transfer channels.
-- Virtual users for email, to separate from base system.
-  - Imperative for any modern email system, in case of a compromised user account.
-- Hardened firewall to deter hackers sniffing for weak passwords.
 
 ## Documentation
 
