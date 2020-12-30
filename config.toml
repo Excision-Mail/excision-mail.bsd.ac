@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Excision Mail @ bsd.ac"
 theme = "learn"
+publishDir = "docs"
 
 # needed for ox-hugo code snippets
 [markup.goldmark.renderer]

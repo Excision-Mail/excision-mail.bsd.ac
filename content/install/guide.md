@@ -16,6 +16,10 @@ weight = 1001
 
 It is recommended to first start with a minimal configuration of only the necessities and then re-run the installation to enable the optional extras.
 
+{{% notice info %}}
+A detailed description of each option is given in the [vars-sample.yml](https://github.com/Excision-Mail/Excision-Mail/blob/master/vars-sample.yml) file.
+{{% /notice %}}
+
 A minimal configuration using the optional, but highly recommended, [nsd(8)](https://man.openbsd.org/nsd.8) setup would be similar to:
 
 ```yml
@@ -79,10 +83,6 @@ public_nameservers:
           ipv6: 2a0b:1640:1:1:1:1:8ec:5a47 
 ```
 
-{{% notice info %}}
-A detailed description of each option is given in the [vars-sample.yml](https://github.com/Excision-Mail/Excision-Mail/blob/master/vars-sample.yml) file.
-{{% /notice %}}
-
 ## Set up the inventory {#inventory}
 
 If you are running Ansible on the mail server, the default `inventory-sample.ini` should be enough. Just copy and rename the file to `inventory.ini` and it should work.
@@ -134,7 +134,7 @@ The following roles are run (in order):
 - [httpd](httpd):
     - Sets up the [httpd(8)](https://man.openbsd.org/man8/httpd.8) web server for all domains and subdomains.
 - [acme](acme):
-    - Creates the *SSL* certificates with [acme-client](https://man.openbsd.org/man1/acme-client.1).
+    - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
     - Sets up the [relayd(8)](https://man.openbsd.org/man8/relayd.8) reverse proxy.
 - [spamd](spamd) (optional):
     - Sets up grey listing and tarpitting for spam protection.

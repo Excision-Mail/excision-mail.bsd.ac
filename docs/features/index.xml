@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Features Highlights on Excision Mail @ bsd.ac</title>
+    <link>/features/</link>
+    <description>Recent content in Features Highlights on Excision Mail @ bsd.ac</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 15:48:46 -0400</lastBuildDate><atom:link href="/features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calendar and Contacts</title>
+      <link>/features/davical/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
+      
+      <guid>/features/davical/</guid>
+      <description>DAViCal - CardDav CalDAV </description>
+    </item>
+    
+    <item>
+      <title>Emails</title>
+      <link>/features/email/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
+      
+      <guid>/features/email/</guid>
+      <description>Emails </description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/features/security/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
+      
+      <guid>/features/security/</guid>
+      <description>Security </description>
+    </item>
+    
+    <item>
+      <title>System Management</title>
+      <link>/features/system/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
+      
+      <guid>/features/system/</guid>
+      <description>System Management </description>
+    </item>
+    
+  </channel>
+</rss>

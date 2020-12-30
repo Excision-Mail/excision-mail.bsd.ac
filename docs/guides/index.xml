@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extra guides on Excision Mail @ bsd.ac</title>
+    <link>/guides/</link>
+    <description>Recent content in Extra guides on Excision Mail @ bsd.ac</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 15:48:46 -0400</lastBuildDate><atom:link href="/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secondary nameserver overview</title>
+      <link>/guides/secondary/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:47 -0400</pubDate>
+      
+      <guid>/guides/secondary/</guid>
+      <description>Secondary and Primary DNS explanations First let us look at the big picture of the stealth master configuration of a DNS server
+ LARGE, SMALL, MEDIUM show the computing capabilities of the server.   ------------------- ----------------------- --------------------- | (SMALL) | NOTIFY | (MEDIUM) | (internal) | (LARGE) | | Personal | ---------------&amp;gt; | Secondary DNS |&amp;lt;------------&amp;gt;| Public facing | | VPS | &amp;lt;--------------- | server IP | | DNS server | | [ip1] | AXFR request | [ip2] | | [ip3] | ------------------- ----------------------- --------------------- | ^ | --------------------------------------------------- | | two way communication between VPS and user | | | | | | ------------------- primary NS query -------------- | | | (LARGE) | &amp;lt;--------------- | (USER) | domain ip query | | | Registrar | ---------------&amp;gt; | user | ------------------ | | | ip3 as primary | |&amp;lt;--------------------- ------------------- NS -------------- ip1 as address of domain Quick overview of DNS DNS stands for domain name server/system and is the first step in establishing communication with a host.</description>
+    </item>
+    
+    <item>
+      <title>FreeDNS setup</title>
+      <link>/guides/freedns/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:48 -0400</pubDate>
+      
+      <guid>/guides/freedns/</guid>
+      <description>FreeDNS (afraid.org) Example setup for stealth master configuration using freedns.afraid.org
+FreeDNS configuration First make an account on FreeDNS and then go to add backup dns:
+https://freedns.afraid.org/secondary/add.php
+  Secondary servers The information related to secondary nameservers is available on their website: https://freedns.afraid.org/secondary/instructions.php
+  NOTE: This still hasn&amp;rsquo;t given you the ip of ns2.afraid.org. You should poke around on their website to find the relevant information or use the `host` command on OpenBSD to get the ip addresses of ns2.</description>
+    </item>
+    
+    <item>
+      <title>Manual DNS setup</title>
+      <link>/guides/manualdns/</link>
+      <pubDate>Tue, 16 Jun 2020 15:48:49 -0400</pubDate>
+      
+      <guid>/guides/manualdns/</guid>
+      <description>If for some reason you have decided to not enable_nsd and want to do it manually, I have outlined the necessary steps for creating records at your DNS provider.
+Assumptions  Your domain name: pdomain.abc (for primary domain) You have configured an A record for excision.pdomain.abc, so that it points to the current server. Your host server has reverse DNS resolving to excision.pdomain.abc. You are configuring dns for a secondary domain sdomain.</description>
+    </item>
+    
+  </channel>
+</rss>

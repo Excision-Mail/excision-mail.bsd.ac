@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/install/</loc>
+    <lastmod>2020-06-16T15:48:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/install/guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/features/davical/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/features/email/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/features/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/features/security/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/features/system/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/install/roles/</loc>
+  </url>
+  
+  <url>
+    <loc>/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/guides/</loc>
+    <lastmod>2020-06-16T15:48:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/credits/</loc>
+    <lastmod>2020-06-16T15:48:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dev/</loc>
+    <lastmod>2020-06-16T15:48:43-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/guides/secondary/</loc>
+    <lastmod>2020-06-16T15:48:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/guides/freedns/</loc>
+    <lastmod>2020-06-16T15:48:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/guides/manualdns/</loc>
+    <lastmod>2020-06-16T15:48:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/usage/</loc>
+    <lastmod>2020-06-16T15:48:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/backups/</loc>
+    <lastmod>2020-06-16T15:48:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-06-16T15:48:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/main/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>
