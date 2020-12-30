@@ -31,7 +31,7 @@ These files are generated over time when using Excision and cannot be restored b
 
 ## Example backup using restic {#restic}
 
-Here is a sample configuration using [restic](https://restic.net/) which backs up the desired folders to a remote repo in `/etc/daily.local`:
+Here is a sample configuration using [restic](https://restic.net/) which does a daily back up to a remote repo, using `/etc/daily.local`:
 
 ```sh
 # set up a restic repo somewhere which can be accessed
