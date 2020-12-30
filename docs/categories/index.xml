@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Excision Mail @ bsd.ac</title>
-    <link>excision.bsd.ac/categories/</link>
+    <link>/excision.bsd.ac/categories/</link>
     <description>Recent content in Categories on Excision Mail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="excision.bsd.ac/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/excision.bsd.ac/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>main</title>
-      <link>excision.bsd.ac/categories/main/</link>
+      <link>/excision.bsd.ac/categories/main/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>excision.bsd.ac/categories/main/</guid>
+      <guid>/excision.bsd.ac/categories/main/</guid>
       <description></description>
     </item>
     

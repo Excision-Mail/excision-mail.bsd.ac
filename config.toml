@@ -1,4 +1,4 @@
-baseURL = "excision.bsd.ac/"
+baseURL = "/excision.bsd.ac/"
 languageCode = "en-us"
 title = "Excision Mail @ bsd.ac"
 theme = "learn"

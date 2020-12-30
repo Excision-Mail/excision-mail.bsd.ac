@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Features Highlights on Excision Mail @ bsd.ac</title>
-    <link>excision.bsd.ac/features/</link>
+    <link>/excision.bsd.ac/features/</link>
     <description>Recent content in Features Highlights on Excision Mail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2020 15:48:46 -0400</lastBuildDate><atom:link href="excision.bsd.ac/features/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Jun 2020 15:48:46 -0400</lastBuildDate><atom:link href="/excision.bsd.ac/features/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calendar and Contacts</title>
-      <link>excision.bsd.ac/features/davical/</link>
+      <link>/excision.bsd.ac/features/davical/</link>
       <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
       
-      <guid>excision.bsd.ac/features/davical/</guid>
+      <guid>/excision.bsd.ac/features/davical/</guid>
       <description>DAViCal - CardDav CalDAV </description>
     </item>
     
     <item>
       <title>Emails</title>
-      <link>excision.bsd.ac/features/email/</link>
+      <link>/excision.bsd.ac/features/email/</link>
       <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
       
-      <guid>excision.bsd.ac/features/email/</guid>
+      <guid>/excision.bsd.ac/features/email/</guid>
       <description>Emails </description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>excision.bsd.ac/features/security/</link>
+      <link>/excision.bsd.ac/features/security/</link>
       <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
       
-      <guid>excision.bsd.ac/features/security/</guid>
+      <guid>/excision.bsd.ac/features/security/</guid>
       <description>Security </description>
     </item>
     
     <item>
       <title>System Management</title>
-      <link>excision.bsd.ac/features/system/</link>
+      <link>/excision.bsd.ac/features/system/</link>
       <pubDate>Tue, 16 Jun 2020 15:48:46 -0400</pubDate>
       
-      <guid>excision.bsd.ac/features/system/</guid>
+      <guid>/excision.bsd.ac/features/system/</guid>
       <description>System Management </description>
     </item>
     
