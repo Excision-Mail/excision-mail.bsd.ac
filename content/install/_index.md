@@ -23,7 +23,7 @@ A detailed description of each option is given in the [vars-sample.yml](https://
 
 A minimal configuration using the optional, but highly recommended, [nsd(8)](https://man.openbsd.org/nsd.8) setup would be similar to:
 
-```yml
+{{< highlight yaml "linenos=table, linenostart=1" >}}
 hostname: mail.aisha.cc
 admin: aisha
 
@@ -33,9 +33,11 @@ domains:
 
 enable_nsd: true
 
+# ip1
 ipv4: 108.61.81.40
 ipv6: 2001:19f0:5:36b:5400:2ff:fe7f:a634
 
+# ip2
 secondary_nameservers:
         - ipv4: 69.65.50.192 # freedns2
         - ipv4: 109.201.133.111 # rest are cloudns
@@ -56,6 +58,7 @@ secondary_nameservers:
         - ipv6: 2a06:fb00:1::4:66
         - ipv6: 2a0b:1640:1:3::1
 
+# ip3
 public_nameservers:
         - name: freedns2 # freedns2
           ipv4: 66.65.50.223
@@ -82,7 +85,7 @@ public_nameservers:
         - name: ns34
           ipv4: 185.206.180.104
           ipv6: 2a0b:1640:1:1:1:1:8ec:5a47 
-```
+{{ </highlight> }}
 
 ## Set up the inventory {#inventory}
 
