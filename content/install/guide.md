@@ -109,12 +109,12 @@ $ ansible-playbook site-preinstall.yml
 
 This runs the following preliminary roles (in order) for a basic setup:
 
-- [pre-excision](../roles/#pre_excision):
+- [pre-excision](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/pre_excision):
     - Installs the needed packages, custom scripts and creates configuration directories.
     - Sets up system users and groups with minimal permissions.
-- [base](../roles/#base):
+- [base](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/base):
     - Set up logging, cron jobs and firewall.
-- [nsd](../roles/#nsd) (optional, highly recommended):
+- [nsd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/nsd) (optional, highly recommended):
     - Configure the DNS for all domains with nsd enabled.
 
 {{% notice info %}}
@@ -131,22 +131,22 @@ $ ansible-playbook site-install.yml
 
 The following roles are run (in order):
 
-- [httpd](../roles/#httpd):
+- [httpd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/httpd):
     - Sets up the [httpd(8)](https://man.openbsd.org/man8/httpd.8) web server for all domains and subdomains.
-- [acme](../roles/#acme):
+- [acme](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/acme):
     - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
     - Sets up the [relayd(8)](https://man.openbsd.org/man8/relayd.8) reverse proxy.
-- [spamd](../roles/#spamd) (optional):
+- [spamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/spamd) (optional):
     - Sets up grey listing and tarpitting for spam protection.
-- [rspamd](../roles/#rspamd):
+- [rspamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/rspamd):
     - Gives a *lot* of spam protection setup techniques.
     - Enables DKIM signing for outgoing mails.
-- [clamav](../roles/#clamav) (optional):
+- [clamav](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/clamav) (optional):
     - Sets up an antivirus which scans all attachments and emails.
     - **WARNING**: this is quite heavy and may cripple smaller servers.
-- [smtpd](../roles/#smtpd):
+- [smtpd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/smtpd):
     - Finally sets up the actual OpenSMTPD MTA.
-- [dovecot](../roles/#dovecot):
+- [dovecot](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/dovecot):
     - Sets up the IMAP/POP3 servers.
     - Sets up the local MDA for virtuals users.
 
@@ -160,7 +160,7 @@ $ ansible-playbook site-extra.yml
 
 This installs and configures (in order):
 
-- [php](../roles/#php)
-- [postgresql](../roles/#postgresql)
-- [davical](../roles/#davical): Calendar + contacts server
-- [roundcube](../roles/#roundcube): Webmail server, along with a managesieve plugin for server side mail filtering.
+- [php](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/php)
+- [postgresql](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/postgresql)
+- [davical](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/davical): Calendar + contacts server
+- [roundcube](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/roundcube): Webmail server, along with a managesieve plugin for server side mail filtering.
