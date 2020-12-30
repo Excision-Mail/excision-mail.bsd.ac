@@ -35,12 +35,7 @@ A lot of the documentation is underwritten and not up to the desired standard.
 Any help writing it is appreciated.
 {{% /notice %}}
 
-- [Installation](install)
+- [Installation guide](install)
+- [System Overview](overview)
 - THE [**excision**](excision) command
-- [Overview](overview)
-  - [System architecture](overview/system)
-  - [Virtual users](overview/users)
-  - [Spam detection](overview/spam)
-  - [GPG publishing](overview/gpg)
-  - [Domain Name Server (stealth primary)](overview/nsd)
 - [Backups](backups)
