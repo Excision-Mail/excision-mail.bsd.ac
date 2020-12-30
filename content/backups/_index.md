@@ -29,7 +29,7 @@ These files are generated over time when using Excision and cannot be restored b
 /var/excision/
 ```
 
-## Backup using restic
+## Backup using restic {#restic}
 
 Here is a sample configuration using [restic](https://restic.net/) which backs up the desired folders to a remote repo in `/etc/daily.local`
 
