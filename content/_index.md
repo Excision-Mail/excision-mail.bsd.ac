@@ -1,7 +1,6 @@
 +++
 title = "Excision Mail"
 author = ["Aisha Tammy"]
-lastmod = 2020-06-16T15:48:40-04:00
 categories = ["main"]
 draft = false
 +++
