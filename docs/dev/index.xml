@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contributing on Excision Mail @ bsd.ac</title>
-    <link>/dev/</link>
+    <link>excision.bsd.ac/dev/</link>
     <description>Recent content in Contributing on Excision Mail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2020 15:48:43 -0400</lastBuildDate><atom:link href="/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Jun 2020 15:48:43 -0400</lastBuildDate><atom:link href="excision.bsd.ac/dev/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

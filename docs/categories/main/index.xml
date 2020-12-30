@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>main on Excision Mail @ bsd.ac</title>
-    <link>/categories/main/</link>
+    <link>excision.bsd.ac/categories/main/</link>
     <description>Recent content in main on Excision Mail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/main/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="excision.bsd.ac/categories/main/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Excision Mail</title>
-      <link>/</link>
+      <link>excision.bsd.ac/</link>
       <pubDate>Tue, 16 Jun 2020 15:48:50 -0400</pubDate>
       
-      <guid>/</guid>
+      <guid>excision.bsd.ac/</guid>
       <description>Excision Mail Fullstack, security focused mailserver based on OpenSMTPD for OpenBSD.
 Website is still a WIP but feel free to explore and give feedback.
  Security Highlights  All connections are TLS enforced, including pop3s, imaps, smtps.  smtp and sieve are STARTTLS with enforced TLS escalation. Insecure versions of pop3 and imap are disabled for additional security.   GnuPG Web Key Service and Web Key Directory support for automatic publishing of public keys in a multi-domain server setting.</description>

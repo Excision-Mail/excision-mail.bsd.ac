@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System Overview on Excision Mail @ bsd.ac</title>
-    <link>/overview/</link>
+    <link>excision.bsd.ac/overview/</link>
     <description>Recent content in System Overview on Excision Mail @ bsd.ac</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/overview/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="excision.bsd.ac/overview/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
