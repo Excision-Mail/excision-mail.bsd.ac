@@ -109,7 +109,7 @@ $ ansible-playbook site-preinstall.yml
 
 This runs the following preliminary roles (in order) for a basic setup:
 
-- [pre-excision](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/pre_excision):
+- [pre-excision](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/pre-excision):
     - Installs the needed packages, custom scripts and creates configuration directories.
     - Sets up system users and groups with minimal permissions.
 - [base](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/base):
