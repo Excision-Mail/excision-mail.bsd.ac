@@ -1,8 +1,8 @@
-baseURL = "/excision.bsd.ac/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Excision Mail @ bsd.ac"
 theme = "learn"
-publishDir = "docs"
+publishDir = "excision-mail.github.io"
 
 # needed for ox-hugo code snippets
 [markup.goldmark.renderer]
