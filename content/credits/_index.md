@@ -6,6 +6,4 @@ draft = false
 weight = 1004
 +++
 
-# Credits
-
 section to honor the people who have contributed

@@ -6,6 +6,4 @@ draft = false
 weight = 1000
 +++
 
-# Installation overview
-
 A simple walkthrough of the installation process.

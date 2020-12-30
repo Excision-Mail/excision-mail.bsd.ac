@@ -6,6 +6,5 @@ draft = false
 weight = 1004
 +++
 
-# Extra guides
 
 Guides not directly related to the base Excision Mail system
