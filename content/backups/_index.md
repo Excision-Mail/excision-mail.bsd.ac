@@ -3,12 +3,12 @@ title = "System Backups"
 author = ["Aisha Tammy"]
 lastmod = 2020-06-16T15:48:50-04:00
 draft = false
-weight = 1015
+weight = 1003
 +++
 
 ## Important non-replaceable files {#ifiles}
 
-These files are generated over time when using Excision and cannot be restored by the ansible scripts
+These files are generated over time when using Excision and cannot be restored by the ansible scripts:
 
 ```sh
 # excision config files folder
@@ -29,9 +29,9 @@ These files are generated over time when using Excision and cannot be restored b
 /var/excision/
 ```
 
-## Backup using restic {#restic}
+## Example backup using restic {#restic}
 
-Here is a sample configuration using [restic](https://restic.net/) which backs up the desired folders to a remote repo in `/etc/daily.local`
+Here is a sample configuration using [restic](https://restic.net/) which backs up the desired folders to a remote repo in `/etc/daily.local`:
 
 ```sh
 # set up a restic repo somewhere which can be accessed
