@@ -109,12 +109,12 @@ $ ansible-playbook site-preinstall.yml
 
 This runs the following preliminary roles (in order) for a basic setup:
 
-- [pre-excision](pre_excision):
+- [pre-excision](roles/#pre_excision):
     - Installs the needed packages, custom scripts and creates configuration directories.
     - Sets up system users and groups with minimal permissions.
-- [base](base):
+- [base](roles/#base):
     - Set up logging, cron jobs and firewall.
-- [nsd](nsd) (optional, highly recommended):
+- [nsd](roles/#nsd) (optional, highly recommended):
     - Configure the DNS for all domains with nsd enabled.
 
 {{% notice info %}}
@@ -131,22 +131,22 @@ $ ansible-playbook site-install.yml
 
 The following roles are run (in order):
 
-- [httpd](roles#httpd):
+- [httpd](roles/#httpd):
     - Sets up the [httpd(8)](https://man.openbsd.org/man8/httpd.8) web server for all domains and subdomains.
-- [acme](acme):
+- [acme](roles/#acme):
     - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
     - Sets up the [relayd(8)](https://man.openbsd.org/man8/relayd.8) reverse proxy.
-- [spamd](spamd) (optional):
+- [spamd](roles/#spamd) (optional):
     - Sets up grey listing and tarpitting for spam protection.
-- [rspamd](rspamd):
+- [rspamd](roles/#rspamd):
     - Gives a *lot* of spam protection setup techniques.
     - Enables DKIM signing for outgoing mails.
-- [clamav](clamav) (optional):
+- [clamav](roles/#clamav) (optional):
     - Sets up an antivirus which scans all attachments and emails.
     - **WARNING**: this is quite heavy and may cripple smaller servers.
-- [smtpd](smtpd):
+- [smtpd](roles/#smtpd):
     - Finally sets up the actual OpenSMTPD MTA.
-- [dovecot](dovecot):
+- [dovecot](roles/#dovecot):
     - Sets up the IMAP/POP3 servers.
     - Sets up the local MDA for virtuals users.
 
@@ -160,7 +160,7 @@ $ ansible-playbook site-extra.yml
 
 This installs and configures (in order):
 
-- [php](php)
-- [postgresql](postgresql)
-- [davical](davical): Calendar + contacts server
-- [roundcube](roundcube): Webmail server, along with a managesieve plugin for server side mail filtering.
+- [php](roles/#php)
+- [postgresql](roles/#postgresql)
+- [davical](roles/#davical): Calendar + contacts server
+- [roundcube](roles/#roundcube): Webmail server, along with a managesieve plugin for server side mail filtering.
