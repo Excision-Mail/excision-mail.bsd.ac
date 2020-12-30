@@ -85,13 +85,13 @@ public_nameservers:
         - name: ns34
           ipv4: 185.206.180.104
           ipv6: 2a0b:1640:1:1:1:1:8ec:5a47 
-{{ </highlight> }}
+{{< /highlight >}}
 
 ## Set up the inventory {#inventory}
 
 If you are running Ansible on the mail server, the default `inventory-sample.ini` should be enough. Just copy and rename the file to `inventory.ini` and it should work.
 
-```ini
+{{< highlight ini "linenos=table, linenostart=1" >}}
 [extraserver]
 extra ansible_connection=local ansible_python_interpreter=/usr/local/bin/python3
 
@@ -101,7 +101,8 @@ extra ansible_connection=local ansible_python_interpreter=/usr/local/bin/python3
 [global:children]
 extraserver
 mainserver
-```
+{{< /highlight >}}
+
 
 ## Execute site-preinstall playbook {#preinstall}
 
