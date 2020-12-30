@@ -37,5 +37,5 @@ Any help writing it is appreciated.
 
 - [Installation guide](install)
 - [System Overview](overview)
-- THE [**excision**](excision) command
+- The [**excision**](excision) command
 - [Backups](backups)
