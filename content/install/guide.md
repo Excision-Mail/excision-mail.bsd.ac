@@ -152,7 +152,7 @@ The following roles are run (in order):
 
 ## Execute site-extras playbook (optional) {#extras}
 
-This enables extra functionality that is not inherently needed for an email server but has become ubiquitous for almost all setups.
+This enables extra functionality that is not inherently needed for an email server but has become ubiquitous for almost all email setups.
 
 ```sh
 $ ansible-playbook site-extra.yml
