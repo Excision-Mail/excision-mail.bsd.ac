@@ -9,8 +9,4 @@ chapter = true
 
 # Installation overview
 
-## [Installation Guide](guide)
-
-## [Role configurations](roles)
-
-
+A simple walkthrough of the installation process.
