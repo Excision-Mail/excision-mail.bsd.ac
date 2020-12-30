@@ -28,7 +28,7 @@ Website is still a WIP but feel free to explore and give feedback.
 
 ## Documentation
 
-The documentation covers various aspects of the system
+The documentation covers various aspects of the system:
 
 {{% notice info %}}
 A lot of the documentation is underwritten and not up to the desired standard.  
