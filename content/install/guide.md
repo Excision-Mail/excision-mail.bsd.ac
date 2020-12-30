@@ -131,7 +131,7 @@ $ ansible-playbook site-install.yml
 
 The following roles are run (in order):
 
-- [httpd](httpd):
+- [httpd](roles#httpd):
     - Sets up the [httpd(8)](https://man.openbsd.org/man8/httpd.8) web server for all domains and subdomains.
 - [acme](acme):
     - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
