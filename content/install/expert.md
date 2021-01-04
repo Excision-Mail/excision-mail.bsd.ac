@@ -19,9 +19,9 @@ The only catch here is that the installation is going to be on two separate serv
 
                 // Draw the flow chart
                 var ren = this.renderer,
-                    colors = Highcharts.getOptions().colors,
-                    rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5],
-                    leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
+                    colors = Highcharts.getOptions().colors;
+                    //rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5],
+                    //leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
 
 
                 // Separator, client from service
@@ -250,12 +250,11 @@ The only catch here is that the installation is going to be on two separate serv
                     })
                     .add();
 
-
             }
         }
     },
     title: {
-        text: 'Distributed Setup',
+        text: 'Excision Mail: Distributed Setup',
         style: {
             color: 'black'
         }
