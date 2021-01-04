@@ -24,6 +24,21 @@ The only catch here is that the installation is going to be on two separate serv
                     leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
 
 
+                // servers
+                ren.label('Main Server<br/>(small)', 0, 0)
+                    .attr({
+                        fill: colors[0],
+                        stroke: 'white',
+                        'stroke-width': 2,
+                        padding: 5,
+                        r: 5
+                    })
+                    .css({
+                        color: 'white'
+                    })
+                    .add()
+                    .shadow(true);
+
                 // Separator, client from service
                 ren.path(['M', 120, 40, 'L', 120, 330])
                     .attr({
@@ -42,38 +57,6 @@ The only catch here is that the installation is going to be on two separate serv
                     })
                     .add();
 
-                // Headers
-                ren.label('Web client', 20, 40)
-                    .css({
-                        fontWeight: 'bold'
-                    })
-                    .add();
-                ren.label('Web service / CLI', 220, 40)
-                    .css({
-                        fontWeight: 'bold'
-                    })
-                    .add();
-                ren.label('Command line client', 440, 40)
-                    .css({
-                        fontWeight: 'bold'
-                    })
-                    .add();
-
-                // SaaS client label
-                ren.label('SaaS client<br/>(browser or<br/>script)', 10, 82)
-                    .attr({
-                        fill: colors[0],
-                        stroke: 'white',
-                        'stroke-width': 2,
-                        padding: 5,
-                        r: 5
-                    })
-                    .css({
-                        color: 'white'
-                    })
-                    .add()
-                    .shadow(true);
-
                 // Arrow from SaaS client to Phantom JS
                 ren.path(rightArrow)
                     .attr({
@@ -82,26 +65,6 @@ The only catch here is that the installation is going to be on two separate serv
                     })
                     .translate(95, 95)
                     .add();
-
-                ren.label('POST options in JSON', 90, 75)
-                    .css({
-                        fontSize: '10px',
-                        color: colors[3]
-                    })
-                    .add();
-
-                ren.label('PhantomJS', 210, 82)
-                    .attr({
-                        r: 5,
-                        width: 100,
-                        fill: colors[1]
-                    })
-                    .css({
-                        color: 'white',
-                        fontWeight: 'bold'
-                    })
-                    .add();
-
                 // Arrow from Phantom JS to Batik
                 ren.path(['M', 250, 110, 'L', 250, 185, 'L', 245, 180, 'M', 250, 185, 'L', 255, 180])
                     .attr({
@@ -109,26 +72,6 @@ The only catch here is that the installation is going to be on two separate serv
                         stroke: colors[3]
                     })
                     .add();
-
-                ren.label('SVG', 255, 120)
-                    .css({
-                        color: colors[3],
-                        fontSize: '10px'
-                    })
-                    .add();
-
-                ren.label('Batik', 210, 200)
-                    .attr({
-                        r: 5,
-                        width: 100,
-                        fill: colors[1]
-                    })
-                    .css({
-                        color: 'white',
-                        fontWeight: 'bold'
-                    })
-                    .add();
-
                 // Arrow from Batik to SaaS client
                 ren
                     .path([
@@ -143,13 +86,6 @@ The only catch here is that the installation is going to be on two separate serv
                     .attr({
                         'stroke-width': 2,
                         stroke: colors[3]
-                    })
-                    .add();
-
-                ren.label('Rasterized image', 100, 110)
-                    .css({
-                        color: colors[3],
-                        fontSize: '10px'
                     })
                     .add();
 
@@ -179,13 +115,6 @@ The only catch here is that the installation is going to be on two separate serv
                     .translate(95, 205)
                     .add();
 
-                ren.label('POST SVG', 110, 185)
-                    .css({
-                        color: colors[1],
-                        fontSize: '10px'
-                    })
-                    .add();
-
                 // Arrow from Batik to Browser
                 ren.path(leftArrow)
                     .attr({
@@ -193,38 +122,6 @@ The only catch here is that the installation is going to be on two separate serv
                         stroke: colors[1]
                     })
                     .translate(95, 215)
-                    .add();
-
-                ren.label('Rasterized image', 100, 215)
-                    .css({
-                        color: colors[1],
-                        fontSize: '10px'
-                    })
-                    .add();
-
-                // Script label
-                ren.label('Script', 450, 82)
-                    .attr({
-                        fill: colors[2],
-                        stroke: 'white',
-                        'stroke-width': 2,
-                        padding: 5,
-                        r: 5
-                    })
-                    .css({
-                        color: 'white',
-                        width: '100px'
-                    })
-                    .add()
-                    .shadow(true);
-
-                // Arrow from Script to PhantomJS
-                ren.path(leftArrow)
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: colors[2]
-                    })
-                    .translate(330, 90)
                     .add();
 
                 ren.label('Command', 340, 70)
@@ -241,13 +138,6 @@ The only catch here is that the installation is going to be on two separate serv
                         stroke: colors[2]
                     })
                     .translate(330, 100)
-                    .add();
-
-                ren.label('Rasterized image', 330, 100)
-                    .css({
-                        color: colors[2],
-                        fontSize: '10px'
-                    })
                     .add();
 
             }
