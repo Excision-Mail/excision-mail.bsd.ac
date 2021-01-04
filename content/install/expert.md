@@ -11,7 +11,7 @@ The only catch here is that the installation is going to be on two separate serv
 
 ## Architecture overview
 
-{{< chart 100 50 >}}
+{{< chart 100 500 >}}
 {
     type: 'bar',
     data: {
