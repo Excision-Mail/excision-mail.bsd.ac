@@ -2,7 +2,7 @@
 title = "Expert Installation"
 author = ["Aisha Tammy"]
 draft = false
-weight = 1000
+weight = 1001
 +++
 
 ## Overview
@@ -115,7 +115,16 @@ public_nameservers:
 ## Set up the inventory {#inventory}
 
 {{< highlight ini "linenos=table, linenostart=1" >}}
+# this is a -current server
+[extraserver]
+extra ansible_host=10.7.0.3 ansible_python_interpreter=/usr/local/bin/python3.9
 
+[mainserver]
+main ansible_host=10.7.0.1 ansible_python_interpreter=/usr/local/bin/python3.8
+
+[global:children]
+extraserver
+mainserver
 {{< /highlight >}}
 
 
