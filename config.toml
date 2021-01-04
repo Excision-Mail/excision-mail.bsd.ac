@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Excision Mail @ bsd.ac"
-theme = "learn"
+theme = [ "hugo-chart", "learn" ]
 publishDir = "excision-mail.github.io"
 
 # needed for ox-hugo code snippets

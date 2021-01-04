@@ -4,3 +4,6 @@
 [submodule "excision-mail.github.io"]
 	path = excision-mail.github.io
 	url = git@github.com:Excision-Mail/excision-mail.github.io
+[submodule "themes/hugo-chart"]
+	path = themes/hugo-chart
+	url = https://github.com/Shen-Yu/hugo-chart.git

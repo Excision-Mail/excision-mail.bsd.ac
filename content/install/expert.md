@@ -11,7 +11,7 @@ The only catch here is that the installation is going to be on two separate serv
 
 ## Architecture overview
 
-{{<mermaid align="left">}}
+{{< mermaid align="left" >}}
 
 {{< /mermaid >}}
 
