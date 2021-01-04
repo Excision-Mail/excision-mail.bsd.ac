@@ -38,7 +38,7 @@ The only catch here is that the installation is going to be on two separate serv
                     })
                     .add()
                     .shadow(true);
-
+/*
                 // Separator, client from service
                 ren.path(['M', 120, 40, 'L', 120, 330])
                     .attr({
@@ -139,7 +139,7 @@ The only catch here is that the installation is going to be on two separate serv
                     })
                     .translate(330, 100)
                     .add();
-
+*/
             }
         }
     },
