@@ -255,7 +255,7 @@ The only catch here is that the installation is going to be on two separate serv
         }
     },
     title: {
-        text: 'Highcharts export server overview',
+        text: 'Distributed Setup',
         style: {
             color: 'black'
         }
