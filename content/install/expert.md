@@ -25,7 +25,7 @@ The only catch here is that the installation is going to be on two separate serv
 
 
                 // servers
-                ren.label('Main Server<br/>(small)', 0, 0)
+                ren.label('Main Server<br/>(small)', 40, 100)
                     .attr({
                         fill: colors[0],
                         stroke: 'white',
