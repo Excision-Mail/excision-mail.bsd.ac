@@ -10,7 +10,7 @@ The overall structure is similar to the standard installation process, wherein y
 The only catch here is that the installation is going to be on two separate servers, which necessitates a more complex `vars.yml` file.
 
 ## Architecture overview
-
+{{< chart [90] [30] >}}
 {
     type: 'bar',
     data: {
@@ -48,6 +48,7 @@ The only catch here is that the installation is going to be on two separate serv
         }
     }
 }
+{{< /chart >}}
 
 
 ## Set up vars.yml {#vars}
