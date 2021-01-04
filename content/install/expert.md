@@ -11,7 +11,7 @@ The only catch here is that the installation is going to be on two separate serv
 
 ## Architecture overview
 
-{{< highcharts-custom chart="expert_map" height="700" width="1000" >}}
+{{< highcharts-custom chart="expert_map" height="600px" width="600px" >}}
         chart: {
         backgroundColor: 'white',
         events: {
@@ -19,127 +19,104 @@ The only catch here is that the installation is going to be on two separate serv
 
                 // Draw the flow chart
                 var ren = this.renderer,
-                    colors = Highcharts.getOptions().colors,
-                    rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5],
-                    leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
-
+                    colors = Highcharts.getOptions().colors;
 
                 // servers
-                ren.label('Main Server<br/>(small)', 40, 100)
+                ren.label('Main Server<br>(small)', 40, 250)
                     .attr({
-                        fill: colors[0],
-                        stroke: 'white',
-                        'stroke-width': 2,
-                        padding: 5,
-                        r: 5
+                        stroke: 'cyan',
+                        'stroke-width': 4,
+			r: 7,
+			padding: 10,
+			width: 120,
+			height: 47,
                     })
                     .css({
-                        color: 'white'
-                    })
-                    .add()
-                    .shadow(true);
-/*
-                // Separator, client from service
-                ren.path(['M', 120, 40, 'L', 120, 330])
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: 'silver',
-                        dashstyle: 'dash'
-                    })
-                    .add();
-
-                // Separator, CLI from service
-                ren.path(['M', 420, 40, 'L', 420, 330])
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: 'silver',
-                        dashstyle: 'dash'
-                    })
-                    .add();
-
-                // Arrow from SaaS client to Phantom JS
-                ren.path(rightArrow)
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: colors[3]
-                    })
-                    .translate(95, 95)
-                    .add();
-                // Arrow from Phantom JS to Batik
-                ren.path(['M', 250, 110, 'L', 250, 185, 'L', 245, 180, 'M', 250, 185, 'L', 255, 180])
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: colors[3]
-                    })
-                    .add();
-                // Arrow from Batik to SaaS client
-                ren
-                    .path([
-                        'M', 235, 185,
-                        'L', 235, 155,
-                        'C', 235, 130, 235, 130, 215, 130,
-                        'L', 95, 130,
-                        'L', 100, 125,
-                        'M', 95, 130,
-                        'L', 100, 135
-                    ])
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: colors[3]
-                    })
-                    .add();
-
-                // Browser label
-                ren.label('Browser<br/>running<br/>Highcharts', 10, 180)
-                    .attr({
-                        fill: colors[0],
-                        stroke: 'white',
-                        'stroke-width': 2,
-                        padding: 5,
-                        r: 5
-                    })
-                    .css({
-                        color: 'white',
-                        width: '100px'
+                        color: 'black',
+                        fontSize: '20px',
                     })
                     .add()
                     .shadow(true);
 
-
-                // Arrow from Browser to Batik
-                ren.path(rightArrow)
+                ren.label('Extras Server<br/>(medium)', 40, 100)
                     .attr({
-                        'stroke-width': 2,
-                        stroke: colors[1]
+                        stroke: 'magenta',
+                        'stroke-width': 4,
+			r: 7,
+			padding: 10,
+			width: 120,
+			height: 47,
                     })
-                    .translate(95, 205)
-                    .add();
-
-                // Arrow from Batik to Browser
-                ren.path(leftArrow)
-                    .attr({
-                        'stroke-width': 2,
-                        stroke: colors[1]
-                    })
-                    .translate(95, 215)
-                    .add();
-
-                ren.label('Command', 340, 70)
                     .css({
-                        color: colors[2],
-                        fontSize: '10px'
+                        color: 'black',
+                        fontSize: '20px',
                     })
-                    .add();
+                    .add()
+                    .shadow(true);
 
-                // Arrow from PhantomJS to Script
-                ren.path(rightArrow)
+                ren.label('Secondary <br/>DNS Server<br/>(medium)', 400, 100)
                     .attr({
+                        stroke: 'orange',
                         'stroke-width': 2,
-                        stroke: colors[2]
+			r: 5,
+			padding: 10,
+			width: 120,
+			height: 70,
                     })
-                    .translate(330, 100)
-                    .add();
-*/
+                    .css({
+                        color: 'black',
+                        fontSize: '20px',
+                    })
+                    .add()
+                    .shadow(true);
+
+                ren.label('Public facing <br/>DNS Server<br/>(small)', 400, 250)
+                    .attr({
+                        stroke: 'red',
+                        'stroke-width': 2,
+			r: 5,
+			padding: 10,
+			width: 120,
+			height: 70,
+                    })
+                    .css({
+                        color: 'black',
+                        fontSize: '20px',
+                    })
+                    .add()
+                    .shadow(true);
+
+                ren.label('User PC<br/>(small)', 240, 400)
+                    .attr({
+                        stroke: 'black',
+                        'stroke-width': 1,
+			r: 3,
+			padding: 10,
+			width: 70,
+			height: 47,
+                    })
+                    .css({
+                        color: 'black',
+                        fontSize: '20px',
+                    })
+                    .add()
+                    .shadow(true);
+
+                ren.label('Registrar<br/>(large)', 440, 440)
+                    .attr({
+                        stroke: 'blue',
+                        'stroke-width': 1,
+			r: 3,
+			padding: 10,
+			width: 85,
+			height: 47,
+                    })
+                    .css({
+                        color: 'black',
+                        fontSize: '20px',
+                    })
+                    .add()
+                    .shadow(true);
             }
         }
     },
