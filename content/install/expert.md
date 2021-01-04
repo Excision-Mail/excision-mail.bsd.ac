@@ -10,11 +10,12 @@ The overall structure is similar to the standard installation process, wherein y
 The only catch here is that the installation is going to be on two separate servers, which necessitates a more complex `vars.yml` file.
 
 ## Architecture overview
-{{< chart [90] [30] >}}
+
+{{< chart 100 50 >}}
 {
     type: 'bar',
     data: {
-        labels: [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Bar Chart',
             data: [12, 19, 18, 16, 13, 14],
