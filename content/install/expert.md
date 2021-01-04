@@ -14,7 +14,7 @@ The only catch here is that the installation is going to be on two separate serv
 {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
         datasets: [{
             label: 'Bar Chart',
             data: [12, 19, 18, 16, 13, 14],
