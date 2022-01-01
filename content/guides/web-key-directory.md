@@ -24,7 +24,7 @@ The general outline of the process:
 4. Receive a confirmation request.   
     Press `o` (small-oh) to sync mail.
 5. Send a mail confirming publication - `Alt + h`.   
-    The confirmation mail needs to be highlighted while pressing this shortcut.
+    The confirmation request must be highlighted while pressing this shortcut.
 6. Receive a mail confirming publication.
     Press `o` (small-oh) to sync mail.
 7. Manually verify that the key has been published.
@@ -74,7 +74,7 @@ gpg-wks-client: submitting request to 'wks@bsd.ac'
 
 	1 Ns+   21/10/31 06:58PM wks@bsd Confirm your key publication (2.4K)
 
-<Alt + h> # the confirmation request should be highlighted
+<Alt + h> # the confirmation request must be highlighted
 ...
 ...
 ...
