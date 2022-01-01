@@ -20,12 +20,15 @@ The general outline of the process:
 1. Add an account using mutt-wizard.   
     While adding an account, specify the port as `587`.
 2. Create a GnuPG key (or skip if already exists).
-3. Start neomutt and start the key publishing request - `Alt + g`.
-4. Receive a verification request.
+3. Start neomutt and begin a key publishing request - `Alt + g`.
+4. Receive a verification request.   
     Press `o` (small-oh) to sync mail.
-5. Send a mail confirming publication - `Alt + h` (while selecting the confirmation email).
+5. Send a mail confirming publication - `Alt + h`.   
+    The confirmation email needs to be the highlighted one while pressing this shortcut.
 6. Receive a return confirmation mail.
-7. Manually verify that the key has been published
+    Press `o` (small-oh) to sync mail.
+7. Manually verify that the key has been published.
+    
 
 ```
 $ mw -a test-user@bsd.ac -S 587
@@ -59,7 +62,7 @@ generator a better chance to gain enough entropy.
 
 $ neomutt
 
-<Alt + g>
+<Alt + g> # begin a WKS publication request
 ...
 ...
 ...
@@ -67,14 +70,28 @@ Enter email ID of user to publish: test-user@bsd.ac
 Enter fingerprint of GPG key to publish: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 gpg-wks-client: submitting request to 'wks@bsd.ac'
 
-<o> # small-oh
+<o> # small-oh (sync mail)
 
 	1 Ns+   21/10/31 06:58PM wks@bsd Confirm your key publication (2.4K)
 
-<Alt + h> # the confirmation request should be selected
+<Alt + h> # the confirmation request should be highlighted
+...
+...
+...
+gpg-wks-client: wkd data found
+gpg-wks-client: draft version 2 requested
 
-<o> # small-oh
+<o> # small-oh (sync mail)
 
 	1 NP+   21/10/31 07:02PM wks@bsd Your key has been published (1.5K)
+
+$ gpg -v --auto-key-locate=clear,wkd,nodefault --locate-key test-user@bsd.ac
+...
+...
+...
+gpg: automatically retrieved 'test-user@bsd.ac' via WKD
+...
+...
+...
 
 ```
