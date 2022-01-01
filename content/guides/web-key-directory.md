@@ -85,6 +85,8 @@ gpg-wks-client: draft version 2 requested
 
 	1 NP+   21/10/31 07:02PM wks@bsd Your key has been published (1.5K)
 
+<q> # quit neomutt
+
 $ gpg -v --auto-key-locate=clear,wkd,nodefault --locate-key test-user@bsd.ac
 ...
 ...
