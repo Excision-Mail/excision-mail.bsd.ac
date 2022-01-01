@@ -21,11 +21,11 @@ The general outline of the process:
     While adding an account, specify the port as `587`.
 2. Create a GnuPG key (or skip if already exists).
 3. Start neomutt and begin a key publishing request - `Alt + g`.
-4. Receive a verification request.   
+4. Receive a confirmation request.   
     Press `o` (small-oh) to sync mail.
 5. Send a mail confirming publication - `Alt + h`.   
-    The confirmation email needs to be the highlighted one while pressing this shortcut.
-6. Receive a return confirmation mail.
+    The confirmation mail needs to be highlighted while pressing this shortcut.
+6. Receive a mail confirming publication.
     Press `o` (small-oh) to sync mail.
 7. Manually verify that the key has been published.
     
