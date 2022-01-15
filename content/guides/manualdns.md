@@ -6,94 +6,98 @@ draft = false
 weight = 1013
 +++
 
-If for some reason you have decided to not _enable\_nsd_ and want to do it manually,
-I have outlined the necessary steps for creating records at your **DNS provider**.
-
+If _enable\_dns_ has not been selected and DNS is managed manually, the DNS records described in the following sections must be enabled.
 
 ## Assumptions {#assumptions}
 
--   Your domain name: _pdomain.abc_ (for primary domain)
--   You have configured an **A record** for _excision.pdomain.abc_, so that it points to the current server.
--   Your host server has **reverse DNS** resolving to _excision.pdomain.abc_.
--   You are configuring dns for a secondary domain _sdomain.xyz_.<br />
-    (It does not need to be secondary, _sdomain.xyz_ could be the same as _pdomain.abc_)
+-   Domain name: _domain.xyz_
+-   IPv4 address: `x.x.x.x`
+-   IPv6 address: `xx::xx`
+-   Mail subdomain: `{{ mail }}`
 
-**TTL** is the default ttl you would like to put, in Excision it is set to _10800_.
+## Subdomains used {#subdomains}
 
-
-## CNAME records for _sdomain.xyz_ {#cname-records-for-sdomain-dot-xyz}
+The following subdomains are used and should point to `x.x.x.x` and `xx:xx`:
 
 ```nil
-autoconfig.sdomain.xyz.          TTL IN CNAME excision.pdomain.abc.
-autodiscover.sdomain.xyz.        TTL IN CNAME excision.pdomain.abc.
-openpgpkey.sdomain.xyz.          TTL IN CNAME excision.pdomain.abc.
-wkd.sdomain.xyz.                 TTL IN CNAME excision.pdomain.abc.
-mta-sts.sdomain.xyz.             TTL IN CNAME excision.pdomain.abc.
-imap.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
-pop3.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
-smtp.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
-webmail.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
-calendar.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
-contacts.sdomain.xyz.                TTL IN CNAME excision.pdomain.abc.
+| Subdomain    |
+|--------------|
+| {{ mail }}   |
+| autoconfig   |
+| autodiscover |
+| dav          |
+| imap         |
+| mta-sts      |
+| openpgpkey   |
+| pop3         |
+| rspamd       |
+| smtp         |
+| webmail      |
+| wkd          |
+
 ```
-
-
-## MX records for _sdomain.xyz_ {#mx-records-for-sdomain-dot-xyz}
+## MX records {#mx-records}
 
 ```nil
-@                                TTL IN MX 0 excision.pdomain.abc.
+
+| Subdomain | Mail provider         |
+|-----------|-----------------------|
+| @         | {{ mail }}.domain.xyz.|
+
 ```
 
-This tells the world that the mail for _sdomain.xyz_ is handled by _excision.pdomain.abc_
+{{% notice note %}}
+If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`, then the above **MX** record should point to `{{ mail }}.primary_domain.xyz`.
+{{% /notice %}}
 
 
-## TXT records for _sdomain.xyz_ {#txt-records-for-sdomain-dot-xyz}
+## SRV records {#srv-records}
 
 ```nil
-sdomain.xyz.                     TTL IN TXT "v=spf1 mx:pdomain.abc -all"
-_dmarc.sdomain.xyz.              TTL IN TXT "v=DMARC1;p=reject;pct=100;rua=mailto:dmarcreports@pdomain.abc"
-_smtp._tls.sdomain.xyz.          TTL IN TXT "v=TLSRPTv1;rua=mailto:tlsreports@pdomain.abc;"
-excision._domainkey.sdomain.xyz. TTL IN TXT "v=DKIM1;k=rsa;p={EXCISIONKEY}"
+
+| SRV record         | Priority | Weight | Port | Domain                                                 |
+|--------------------|----------|--------|------|--------------------------------------------------------|
+| _autodiscover._tcp | 0        | 0      | 443  | autodiscover.domain.xyz.                               |
+| _submissions._tcp  | 0        | 1      | 465  | smtp.domain.xyz.                                       |
+| _submission._tcp   | 0        | 1      | 587  | smtp.domain.xyz.                                       |
+| _imaps._tcp        | 0        | 1      | 993  | imap.domain.xyz.                                       |
+| _pop3s._tcp        | 0        | 1      | 995  | pop3.domain.xyz.                                       |
+| _carddav._tcp      | 5        | 1      | 80   | dav.domain.xyz.                                        |
+| _carddavs._tcp     | 0        | 1      | 443  | dav.domain.xyz.                                        |
+| _caldav._tcp       | 5        | 1      | 80   | dav.domain.xyz.                                        |
+| _caldavs._tcp      | 0        | 1      | 443  | dav.domain.xyz.                                        |
+| _ischedules._tcp   | 0        | 1      | 443  | dav.domain.xyz.                                        |
+| _imap._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
+| _pop3._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
+
 ```
 
-where **{EXCISIONKEY}** is the key stored in **/etc/excision/dkim/excision.pdomain.abc.pub**
-and **/etc/excision/dkim/excision.pdomain.abc.txt**.
+## TXT records {#txt-records}
 
-**NOTE**: Depending on your DNS provider the key generated by Excision is going to be too
-large to fit in one record. You will have to contact your DNS provider to see how
+```nil
+
+| ID                     | TEXT                                                           |
+|------------------------|----------------------------------------------------------------|
+| @                      | "v=spf1 mx:pdomain.abc -all"                                   |
+| _dmarc                 | "v=DMARC1;p=reject;pct=100;rua=mailto:dmarcreports@domain.xyz" |
+| _smtp._tls             | "v=TLSRPTv1;rua=mailto:tlsreports@domain.xyz;"                 |
+| _mta-sts               | "v=STSv1;id={MTA-STS-ID};"                                     |
+| excisionRSA._domainkey | "v=DKIM1;k=rsa;p={EXCISIONKEY}"                                |
+| davRSA._domainkey      | "k=rsa;t=s;p={DAVKEY}"                                         |
+
+```
+
+**{EXCISIONKEY}** and **{DAVKEY}** are the keys stored in **/etc/excision/dkim/excisionRSA.domain.xyz.pub** and **/etc/excision/dkim/davRSA.domain.xyz.pub**, respectively. The text records are created and stored in **/etc/excision/dkim/excisionRSA.domain.xyz.txt** and **/etc/excision/dkim/davRSA.domain.xyz.txt**.
+
+{{% notice note %}}
+Depending on the DNS provider the key generated by Excision is going to be too
+large to fit in one record. The DNS providers documentation should show how
 to fit a large key into a TXT record. The work around this is to store more than one string
-in a DNS record (yes, this is possible to do, but the implementation depends on your
-hosting providers UI).<br />
-Excision breaks down the record into correct sizes and stores it in the text files above.
+in a DNS record (yes, this is possible to do, but the implementation depends on the hosting providers UI).
+<br />
+Excision Mail breaks down the record into correct sizes and stores it in the text files above in the following format:
 
 ```nil
-( "v=DKIM1;k=rsa;p=OQWcn812jW..." "....UnsdU;" )
+( "v=DKIM1;k=rsa;p=oQWCm252..." "....NnsPq;" )
 ```
-
-
-## SRV records for _sdomain.xyz_ {#srv-records-for-sdomain-dot-xyz}
-
-Needed for setting up older client software (and also Microsoft/iOS)
-
-```nil
-_submissions._tcp.sdomain.xyz.   TTL IN SRV 0 1 465 smtp.sdomain.xyz.
-_submission._tcp.sdomain.xyz.    TTL IN SRV 0 1 587 smtp.sdomain.xyz.
-_imaps._tcp.sdomain.xyz.         TTL IN SRV 0 1 993 imap.sdomain.xyz.
-_pop3s._tcp.sdomain.xyz.         TTL IN SRV 0 1 995 pop3.sdomain.xyz.
-_imap._tcp.sdomain.xyz.          TTL IN SRV 0 0 0   .                   (OPTIONAL, depending on DNS provider compatibility)
-_pop3._tcp.sdomain.xyz.          TTL IN SRV 0 0 0   .                   (OPTIONAL, depending on DNS provider compatibility)
-```
-
-
-## Extra SRV records for setting up openpgpkey using GnuPG {#extra-srv-records-for-setting-up-openpgpkey-using-gnupg}
-
-```nil
-_openpgpkey._tcp.sdomain.xyz.    TTL IN SRV 0 0 443 wkd.sdomain.xyz.
-```
-
-
-## SRV records for autodiscover in Microsoft {#srv-records-for-autodiscover-in-microsoft}
-
-```nil
-_autodiscover._tcp.sdomain.xyz.  TTL IN SRV 0 0 443 autodiscover.sdomain.xyz.
-```
+{{% /notice %}}
