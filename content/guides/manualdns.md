@@ -84,7 +84,5 @@ to fit a large key into a TXT record. The work around this is to store more than
 in a DNS record (yes, this is possible to do, but the implementation depends on the hosting providers UI).
 <br />
 Excision Mail breaks down the record into correct sizes and stores it in the text files above in the format:<br />
-
 `( "v=DKIM1;k=rsa;p=oQWCm252..." "....NnsPq;" )`
-
 {{% /notice %}}
