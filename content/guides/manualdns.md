@@ -43,7 +43,7 @@ The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 
 
 {{% notice note %}}
-If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`, then the above **MX** record should point to `{{ mail }}.primary_domain.xyz`.
+If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`, then the above **MX** record should point to `{{ mail }}.primary_domain.abc`.
 {{% /notice %}}
 
 
