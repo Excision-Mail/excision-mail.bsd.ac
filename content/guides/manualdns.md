@@ -19,8 +19,7 @@ If _enable\_dns_ has not been selected and DNS is managed manually, the DNS reco
 
 The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 
-| Subdomain    |
-|--------------|
+```
 | {{ mail }}   |
 | autoconfig   |
 | autodiscover |
@@ -33,13 +32,14 @@ The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 | smtp         |
 | webmail      |
 | wkd          |
+```
 
 ## MX records {#mx-records}
 
 
-| Subdomain | Mail provider         |
-|-----------|-----------------------|
-| @         | {{ mail }}.domain.xyz.|
+| Subdomain | Mail provider            |
+|-----------|--------------------------|
+| `@`       | `{{ mail }}.domain.xyz.` |
 
 
 {{% notice note %}}
@@ -51,29 +51,31 @@ If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`,
 
 | SRV record         | Priority | Weight | Port | Domain                                                 |
 |--------------------|----------|--------|------|--------------------------------------------------------|
-| _autodiscover._tcp | 0        | 0      | 443  | autodiscover.domain.xyz.                               |
-| _submissions._tcp  | 0        | 1      | 465  | smtp.domain.xyz.                                       |
-| _submission._tcp   | 0        | 1      | 587  | smtp.domain.xyz.                                       |
-| _imaps._tcp        | 0        | 1      | 993  | imap.domain.xyz.                                       |
-| _pop3s._tcp        | 0        | 1      | 995  | pop3.domain.xyz.                                       |
-| _carddav._tcp      | 5        | 1      | 80   | dav.domain.xyz.                                        |
-| _carddavs._tcp     | 0        | 1      | 443  | dav.domain.xyz.                                        |
-| _caldav._tcp       | 5        | 1      | 80   | dav.domain.xyz.                                        |
-| _caldavs._tcp      | 0        | 1      | 443  | dav.domain.xyz.                                        |
-| _ischedules._tcp   | 0        | 1      | 443  | dav.domain.xyz.                                        |
-| _imap._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
-| _pop3._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
+| ``_autodiscover._tcp`` | ``0``        | ``0``      | ``443``  | ``autodiscover.domain.xyz.``                               |
+| ``_submissions._tcp``  | ``0``        | ``1``      | ``465``  | ``smtp.domain.xyz.``                                       |
+| ``_submission._tcp``   | ``0``        | ``1``      | ``587``  | ``smtp.domain.xyz.``                                       |
+| ``_imaps._tcp``        | ``0``        | ``1``      | ``993``  | ``imap.domain.xyz.``                                       |
+| ``_pop3s._tcp``        | ``0``        | ``1``      | ``995``  | ``pop3.domain.xyz.``                                       |
+| ``_carddav._tcp``      | ``5``        | ``1``      | ``80 ``  | ``dav.domain.xyz.``                                       |
+| ``_carddavs._tcp``     | ``0``        | ``1``      | ``443``  | ``dav.domain.xyz.``                                        |
+| ``_caldav._tcp``       | ``5``        | ``1``      | ``80 ``  | ``dav.domain.xyz.``                                        |
+| ``_caldavs._tcp``      | ``0``        | ``1``      | ``443``  | ``dav.domain.xyz.``                                        |
+| ``_ischedules._tcp``   | ``0``        | ``1``      | ``443``  |``dav.domain.xyz.``                                        |
+| ``_imap._tcp``         | ``0``        | ``0``      | ``0``  | ``.``  (OPTIONAL, depending on DNS provider compatibility) |
+| ``_pop3._tcp``         | ``0``        | ``0``      | ``0``    |``.``  (OPTIONAL, depending on DNS provider compatibility) |
 
 ## TXT records {#txt-records}
 
 | ID                     | TEXT                                                           |
 |------------------------|----------------------------------------------------------------|
-| @                      | "v=spf1 mx:pdomain.abc -all"                                   |
-| _dmarc                 | "v=DMARC1;p=reject;pct=100;rua=mailto:dmarcreports@domain.xyz" |
-| _smtp._tls             | "v=TLSRPTv1;rua=mailto:tlsreports@domain.xyz;"                 |
-| _mta-sts               | "v=STSv1;id={MTA-STS-ID};"                                     |
-| excisionRSA._domainkey | "v=DKIM1;k=rsa;p={EXCISIONKEY}"                                |
-| davRSA._domainkey      | "k=rsa;t=s;p={DAVKEY}"                                         |
+| ``@``                      | ``"v=spf1 mx:pdomain.abc -all"``                                   |
+| ``_dmarc``                | "v=DMARC1;p=reject;pct=100;rua=mailto:dmarcreports@domain.xyz" |
+| ``_smtp._tls``             | "v=TLSRPTv1;rua=mailto:tlsreports@domain.xyz;"                 |
+| ``_mta-sts``               | "v=STSv1;id={MTA-STS-ID};"                                     |
+| ``excisionRSA._domainkey`` | "v=DKIM1;k=rsa;p={EXCISIONKEY}"                                |
+| ``davRSA._domainkey``      | "k=rsa;t=s;p={DAVKEY}"                                         |
+
+The **{MTA-STS-ID}** is an ID which should only increase over time. It represents the last time the MTA-STS information for a domain was changed. Realistically, this can be set to the date and time of creating (or modifying) this record, e.g. *`20220114T165521`*.
 
 **{EXCISIONKEY}** and **{DAVKEY}** are the keys stored in **/etc/excision/dkim/excisionRSA.domain.xyz.pub** and **/etc/excision/dkim/davRSA.domain.xyz.pub**, respectively. The text records are created and stored in **/etc/excision/dkim/excisionRSA.domain.xyz.txt** and **/etc/excision/dkim/davRSA.domain.xyz.txt**.
 
