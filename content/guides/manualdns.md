@@ -17,7 +17,7 @@ If _enable\_dns_ has not been selected and DNS is managed manually, the DNS reco
 
 ## Subdomains used {#subdomains}
 
-The following subdomains are used and should point to `x.x.x.x` and `xx:xx`:
+The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 
 ```nil
 | Subdomain    |
