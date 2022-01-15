@@ -20,18 +20,18 @@ If _enable\_dns_ has not been selected and DNS is managed manually, the DNS reco
 The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 
 ```
-| {{ mail }}   |
-| autoconfig   |
-| autodiscover |
-| dav          |
-| imap         |
-| mta-sts      |
-| openpgpkey   |
-| pop3         |
-| rspamd       |
-| smtp         |
-| webmail      |
-| wkd          |
+{{ mail }}
+autoconfig
+autodiscover
+dav
+imap
+mta-sts
+openpgpkey
+pop3
+rspamd
+smtp
+webmail
+wkd
 ```
 
 ## MX records {#mx-records}
