@@ -19,7 +19,6 @@ If _enable\_dns_ has not been selected and DNS is managed manually, the DNS reco
 
 The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 
-```nil
 | Subdomain    |
 |--------------|
 | {{ mail }}   |
@@ -35,16 +34,13 @@ The following subdomains are used and should point to `x.x.x.x` and `xx::xx`:
 | webmail      |
 | wkd          |
 
-```
 ## MX records {#mx-records}
 
-```nil
 
 | Subdomain | Mail provider         |
 |-----------|-----------------------|
 | @         | {{ mail }}.domain.xyz.|
 
-```
 
 {{% notice note %}}
 If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`, then the above **MX** record should point to `{{ mail }}.primary_domain.xyz`.
@@ -52,8 +48,6 @@ If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`,
 
 
 ## SRV records {#srv-records}
-
-```nil
 
 | SRV record         | Priority | Weight | Port | Domain                                                 |
 |--------------------|----------|--------|------|--------------------------------------------------------|
@@ -70,11 +64,7 @@ If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`,
 | _imap._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
 | _pop3._tcp         | 0        | 0      | 0    | .  (OPTIONAL, depending on DNS provider compatibility) |
 
-```
-
 ## TXT records {#txt-records}
-
-```nil
 
 | ID                     | TEXT                                                           |
 |------------------------|----------------------------------------------------------------|
@@ -84,8 +74,6 @@ If `domain.zyx` is an extra domain added on the server for `primary_domain.abc`,
 | _mta-sts               | "v=STSv1;id={MTA-STS-ID};"                                     |
 | excisionRSA._domainkey | "v=DKIM1;k=rsa;p={EXCISIONKEY}"                                |
 | davRSA._domainkey      | "k=rsa;t=s;p={DAVKEY}"                                         |
-
-```
 
 **{EXCISIONKEY}** and **{DAVKEY}** are the keys stored in **/etc/excision/dkim/excisionRSA.domain.xyz.pub** and **/etc/excision/dkim/davRSA.domain.xyz.pub**, respectively. The text records are created and stored in **/etc/excision/dkim/excisionRSA.domain.xyz.txt** and **/etc/excision/dkim/davRSA.domain.xyz.txt**.
 
