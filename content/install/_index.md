@@ -124,17 +124,30 @@ $ ansible-playbook site-preinstall.yml
 
 This runs the following preliminary roles (in order) for a basic setup:
 
-- [pre-excision](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/pre-excision):
-    - Installs the needed packages, custom scripts and creates configuration directories.
-    - Sets up system users and groups with minimal permissions.
 - [base](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/base):
-    - Set up logging, cron jobs and firewall.
-- [nsd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/nsd) (optional, highly recommended):
-    - Configure the DNS for all domains with nsd enabled.
+    - Set up logging, login and cron jobs.
+    - Deploys `excision` commands
+    - Sets up [MTA STS](https://datatracker.ietf.org/doc/html/rfc8461), [OpenPGP Web Key Service](https://wiki.gnupg.org/WKS) and client autodiscovery infrastructure
+- [pf](https://www.openbsd.org/faq/pf/)
+    - Sets up basic [pf(5)](https://man.openbsd.org/pf.conf.5) firewall rules
+- [syslog](https://github.com/Excision-Mail/ansible-syslog)
+    - Configures [syslogd(8)](https://man.openbsd.org/syslogd.8).
+- [knot](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/knot) (optional, highly recommended)
+    - Sets up [knot DNS](https://www.knot-dns.cz/) for all domains with `dns` option enabled and configures an authoritative nameserver for [Stealth master](guides/secondary/#stealth-master) setup
+- [zones](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/zones) (optional, highly recommended)
+    - Generate DNS zone files for knot
+    - Generates DKIM certificates
 
 {{% notice info %}}
 It will take about 10-15 minutes after running the **site-preinstall** role for the DNS changes to be in effect. Running the **site-install** role too soon may cause it to abort as Lets Encrypt may not be able to find the websites.
 {{% /notice %}}
+
+If you skipped the setup and configuration of [knot](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/knot), you should now follow the [Manual DNS Setup](guides/manualdns/) guide to create the DNS records in your provider's interface. For DKIM keys, login to the mailserver and create DKIM keys manually with:
+
+```sh
+$ excision ensure-dkim
+```
+Add the TXT records `excisionRSA._domainkey` (for outgoing mails signed by `rspamd`) and `davRSA._domainkey` (optional, for outgoing scheduling requests by `davical`) with the values shown in the above command's output.
 
 ## Execute site-install playbook {#install}
 
@@ -146,16 +159,26 @@ $ ansible-playbook site-install.yml
 
 The following roles are run (in order):
 
-- [nginx_core](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/nginx_core):
-    - Sets up the [nginx](https://) configuration to ensure acme server for all domains and subdomains.
-- [acme](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/acme):
+- [nginx_core](https://github.com/Excision-Mail/ansible-nginx)
+    - Installs [nginx](https://www.nginx.com/) and configures basic webserver settings
+    - Web server for all domains and subdomains
+- [acme](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/acme):
     - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
-- [rspamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/rspamd):
-    - Gives a *lot* of spam protection setup techniques.
-    - Enables DKIM signing for outgoing mails.
+- [nginx_main_sites](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/nginx_extra_sites)
+    - Configures nginx to serve ACME challenges, [MTA STS](https://datatracker.ietf.org/doc/html/rfc8461) information, [OpenPGP Web Key Service](https://wiki.gnupg.org/WKS) and client autodiscovery.
+- [openldap](https://github.com/Excision-Mail/ansible-openldap) (work in progress)
+    - Sets up LDAP for all services to bind against (support in OpenSMTPD pending)
+- [spamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/spamd) (optional):
+    - Sets up grey listing and tarpitting for spam protection.
+- [redis](https://github.com/Excision-Mail/ansible-redis)
+    - Sets up redis for use in rspamd
+>>>>>>> Update and enrich installation guide
 - [clamav](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/clamav) (optional):
     - Sets up an antivirus which scans all attachments and emails.
     - **WARNING**: this is quite heavy and may cripple smaller servers.
+- [rspamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/rspamd):
+    - Gives a *lot* of spam protection setup techniques.
+    - Enables DKIM signing for outgoing mails.
 - [smtpd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/smtpd):
     - Finally sets up the actual OpenSMTPD MTA.
 - [dovecot](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/dovecot):
