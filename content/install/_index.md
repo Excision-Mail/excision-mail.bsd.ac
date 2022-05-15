@@ -133,7 +133,7 @@ This runs the following preliminary roles (in order) for a basic setup:
 - [syslog](https://github.com/Excision-Mail/ansible-syslog)
     - Configures [syslogd(8)](https://man.openbsd.org/syslogd.8).
 - [knot](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/knot) (optional, highly recommended)
-    - Sets up [knot DNS](https://www.knot-dns.cz/) for all domains with `dns` option enabled and configures an authoritative nameserver for [Stealth master](guides/secondary/#stealth-master) setup
+    - Sets up [knot DNS](https://www.knot-dns.cz/) for all domains with `dns` option enabled and configures an authoritative nameserver for [Stealth master](../guides/secondary/#stealth-master) setup
 - [zones](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/zones) (optional, highly recommended)
     - Generate DNS zone files for knot
     - Generates DKIM certificates
@@ -142,7 +142,7 @@ This runs the following preliminary roles (in order) for a basic setup:
 It will take about 10-15 minutes after running the **site-preinstall** role for the DNS changes to be in effect. Running the **site-install** role too soon may cause it to abort as Lets Encrypt may not be able to find the websites.
 {{% /notice %}}
 
-If you skipped the setup and configuration of [knot](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/knot), you should now follow the [Manual DNS Setup](guides/manualdns/) guide to create the DNS records in your provider's interface. For DKIM keys, login to the mailserver and create DKIM keys manually with:
+If you skipped the setup and configuration of [knot](https://github.com/Excision-Mail/Excision-Mail/tree/develop/roles/knot), you should now follow the [Manual DNS Setup](../guides/manualdns/) guide to create the DNS records in your provider's interface. For DKIM keys, login to the mailserver and create DKIM keys manually with:
 
 ```sh
 $ excision ensure-dkim
