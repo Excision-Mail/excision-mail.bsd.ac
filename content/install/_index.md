@@ -7,11 +7,21 @@ weight = 1000
 +++
 
 ## Overview
+- [Set up secrets](#secrets)
 - [Set up vars](#vars)
 - [Set up the inventory](#inventory)
 - [Execute site-preinstall playbook](#preinstall)
 - [Execute site-install playbook](#install)
 - [Execute site-extras playbook](#extras) (optional)
+
+## Set up secrets.yml {#secrets}
+
+The ansible setup needs a few passwords to be generated on the user side, with the help of *scripts/gen_secrets.py*, which is to be run via
+```
+$ python3 scripts/gen_secrets.py
+```
+
+This will create/modify the file *secrets.yml*, any original passwords are not overwritten, by adding the (randomly generated) passwords needed by the setup.
 
 ## Set up vars.yml {#vars}
 
@@ -39,52 +49,52 @@ ipv6: 2001:19f0:5:36b:5400:2ff:fe7f:a634
 
 # ip2
 secondary_nameservers:
-        - ipv4: 69.65.50.192 # freedns2
-        - ipv4: 109.201.133.111 # rest are cloudns
-        - ipv4: 209.58.140.85
-        - ipv4: 54.36.26.145
-        - ipv4: 185.206.180.104
-        - ipv4: 185.136.96.66
-        - ipv4: 185.136.97.66
-        - ipv4: 185.136.98.66
-        - ipv4: 185.136.99.66
-        - ipv4: 185.206.180.193
-        - ipv6: 2a00:1768:1001:9::31:1
-        - ipv6: 2605:fe80:2100:a013:7::1
-        - ipv6: 2a0b:1640:1:1:1:1:8ec:5a47
-        - ipv6: 2a06:fb00:1::1:66
-        - ipv6: 2a06:fb00:1::2:66
-        - ipv6: 2a06:fb00:1::3:66
-        - ipv6: 2a06:fb00:1::4:66
-        - ipv6: 2a0b:1640:1:3::1
+  - '69.65.50.192' # freedns2
+  - '109.201.133.111' # rest are cloudns
+  - '209.58.140.85'
+  - '54.36.26.145'
+  - '185.206.180.104'
+  - '185.136.96.66'
+  - '185.136.97.66'
+  - '185.136.98.66'
+  - '185.136.99.66'
+  - '185.206.180.193'
+  - '2a00:1768:1001:9::31:1'
+  - '2605:fe80:2100:a013:7::1'
+  - '2a0b:1640:1:1:1:1:8ec:5a47'
+  - '2a06:fb00:1::1:66'
+  - '2a06:fb00:1::2:66'
+  - '2a06:fb00:1::3:66'
+  - '2a06:fb00:1::4:66'
+  - '2a0b:1640:1:3::1'
 
 # ip3
 public_nameservers:
-        - name: freedns2 # freedns2
-          ipv4: 66.65.50.223
-        - name: pns31 # rest are cloudns
-          ipv4: 185.136.96.66
-          ipv6: 2a06:fb00:1::1:66
-        - name: pns32
-          ipv4: 185.136.97.66
-          ipv6: 2a06:fb00:1::2:66
-        - name: pns33
-          ipv4: 185.136.98.66
-          ipv6: 2a06:fb00:1::3:66
-        - name: pns34
-          ipv4: 185.136.99.66
-          ipv6: 2a06:fb00:1::4:66
-        - name: ns31
-          ipv4: 109.201.133.111
-          ipv6: 2a00:1768:1001:9::31:1 
-        - name: ns32
-          ipv4: 209.58.140.85
-          ipv6: 2605:fe80:2100:a013:7::1 
-        - name: ns33
-          ipv4: 54.36.26.145
-        - name: ns34
-          ipv4: 185.206.180.104
-          ipv6: 2a0b:1640:1:1:1:1:8ec:5a47 
+  - name: freedns2 # freedns2
+    ipv4: 66.65.50.223
+  - name: pns31 # rest are cloudns
+    ipv4: 185.136.96.66
+    ipv6: 2a06:fb00:1::1:66
+  - name: pns32
+    ipv4: 185.136.97.66
+    ipv6: 2a06:fb00:1::2:66
+  - name: pns33
+    ipv4: 185.136.98.66
+    ipv6: 2a06:fb00:1::3:66
+  - name: pns34
+    ipv4: 185.136.99.66
+    ipv6: 2a06:fb00:1::4:66
+  - name: ns31
+    ipv4: 109.201.133.111
+    ipv6: 2a00:1768:1001:9::31:1
+  - name: ns32
+    ipv4: 209.58.140.85
+    ipv6: 2605:fe80:2100:a013:7::1
+  - name: ns33
+    ipv4: 54.36.26.145
+  - name: ns34
+    ipv4: 185.206.180.104
+    ipv6: 2a0b:1640:1:1:1:1:8ec:5a47
 {{< /highlight >}}
 
 ## Set up the inventory {#inventory}
@@ -136,13 +146,10 @@ $ ansible-playbook site-install.yml
 
 The following roles are run (in order):
 
-- [httpd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/httpd):
-    - Sets up the [httpd(8)](https://man.openbsd.org/man8/httpd.8) web server for all domains and subdomains.
+- [nginx_core](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/nginx_core):
+    - Sets up the [nginx](https://) configuration to ensure acme server for all domains and subdomains.
 - [acme](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/acme):
     - Creates the *SSL* certificates with [acme-client(1)](https://man.openbsd.org/man1/acme-client.1).
-    - Sets up the [relayd(8)](https://man.openbsd.org/man8/relayd.8) reverse proxy.
-- [spamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/spamd) (optional):
-    - Sets up grey listing and tarpitting for spam protection.
 - [rspamd](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/rspamd):
     - Gives a *lot* of spam protection setup techniques.
     - Enables DKIM signing for outgoing mails.
@@ -166,6 +173,6 @@ $ ansible-playbook site-extra.yml
 This installs and configures (in order):
 
 - [php](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/php)
-- [postgresql](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/postgresql)
-- [davical](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/davical): Calendar + contacts server
+- [mariadb](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/mariadb)
+- [baikal](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/baikal): Calendar + contacts server
 - [roundcube](https://github.com/Excision-Mail/Excision-Mail/tree/master/roles/roundcube): Webmail server, along with a managesieve plugin for server side mail filtering.
