@@ -38,7 +38,7 @@ First let us look at the big picture of the stealth master configuration of a DN
 
 DNS stands for **domain name server/system** and is the first step in establishing communication with a host.<br />
 DNS is the method to translate a name of the form _<https://openbsd.org>_ to an ipv4 address, which can be of
-the form **129.128.5.194** or an ipv6 address, which is a lot more complex, of the form **dead:beef**.
+the form **129.128.5.194** or an ipv6 address, which is a lot more complex, of the form **dead::beef**.
 
 
 ## DNS flow overview {#dns-flow-overview}
