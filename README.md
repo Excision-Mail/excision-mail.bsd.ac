@@ -2,7 +2,7 @@
 
 ## Work-flow for generating the website
 
-The github pages websiet is available at: https://excision-mail.github.io/excision.bsd.ac/
+The github pages websiet is available at: https://excision-mail.github.io/
 
 ### Clone
 
